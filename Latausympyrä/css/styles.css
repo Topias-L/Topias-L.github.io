@@ -1,0 +1,184 @@
+*, html{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: rgba(20,20,20,1);
+}
+
+#loader1{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 100px;
+	height: 100px;
+	
+	border: 3px dashed;
+	border-radius: 50%;
+	border-color: white;
+	
+	color: white;
+	line-height: 100px;
+	text-align: center;
+	
+	animation-name: anim1;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes anim1{
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+#percentage{
+	animation-name: anim1;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: reverse;
+}
+
+#loader2{
+	position: absolute;
+	top: 200px;
+	left: 20px;
+	
+	height: 20px;
+	width: 200px;
+	border: 2px solid white;
+}
+
+#progress{
+	background-color: green;
+	height: 20px;
+	width: 0px;
+	animation: progressAnim 5s infinite linear;
+}
+
+@keyframes progressAnim{
+	0%{
+		width: 0px;
+		background-color: red;
+	}
+	100%{
+		width: 200px;
+	}
+}
+
+#ball1{
+	position: absolute;
+	top: 300px;
+	left: 50px;
+	width: 5px;
+	height: 5px;
+	
+	background-color: white;
+	border-radius: 50%;
+	
+	animation: rotateAnim1 1.5s infinite ease-in-out;
+	transform-origin: 0px 30px;
+}
+
+#ball2{
+	position: absolute;
+	top: 300px;
+	left: 50px;
+	width: 5px;
+	height: 5px;
+	
+	background-color: white;
+	border-radius: 50%;
+	
+	animation: rotateAnim2 1.5s infinite ease-in-out;
+	animation-delay: 200ms;
+	transform-origin: 0px 30px;
+}
+
+#ball3{
+	position: absolute;
+	top: 300px;
+	left: 50px;
+	width: 5px;
+	height: 5px;
+	
+	background-color: white;
+	border-radius: 50%;
+	
+	animation: rotateAnim3 1.5s infinite ease-in-out;
+	animation-delay: 400ms;
+	transform-origin: 0px 30px;
+}
+
+#ball4{
+	position: absolute;
+	top: 300px;
+	left: 50px;
+	width: 5px;
+	height: 5px;
+	
+	background-color: white;
+	border-radius: 50%;
+	
+	animation: rotateAnim4 1.5s infinite ease-in-out;
+	animation-delay: 600ms;
+	transform-origin: 0px 30px;
+}
+
+#ball5{
+	position: absolute;
+	top: 300px;
+	left: 50px;
+	width: 5px;
+	height: 5px;
+	
+	background-color: white;
+	border-radius: 50%;
+	
+	animation: rotateAnim5 1.5s infinite ease-in-out;
+	animation-delay: 800ms;
+	transform-origin: 0px 30px;
+}
+
+@keyframes rotateAnim1{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotateAnim2{
+	0%{
+		transform: rotate(-10deg);
+	}
+	100%{
+		transform: rotate(350deg);
+	}
+}	
+@keyframes rotateAnim3{
+	0%{
+		transform: rotate(-20deg);
+	}
+	100%{
+		transform: rotate(340deg);
+	}
+}	
+@keyframes rotateAnim4{
+	0%{
+		transform: rotate(-30deg);
+	}
+	100%{
+		transform: rotate(330deg);
+	}
+}	
+@keyframes rotateAnim5{
+	0%{
+		transform: rotate(-40deg);
+	}
+	100%{
+		transform: rotate(320deg);
+	}
+}	

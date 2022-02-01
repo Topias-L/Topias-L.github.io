@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="Stylesheet" href="css\style.css">
+	<meta charset="UTF-8"/>
+	</head>
+	
+	<script>
+	function toggleDisk(){
+	
+		var elem = document.getElementById("disk", "diskback");
+		    if(elem.getAttribute("class") == "hidden"){
+				elem.setAttribute("class", "visible");
+			}
+			else{
+				elem.setAttribute("class", "hidden");
+			}
+			
+	
+	}
+	</script>
+	<body>
+	
+	<div id="fliptext" onClick="toggleDisk();">Click here to show disk</div>
+	
+	<div id="diskshow">Hover cursor on the cover to flip</div>
+	
+	<div id="flip">
+		
+		<div id="disk" class="hidden"></div>
+		<div id="diskback" class="hidden"></div>
+		
+		<div id="front">
+		
+		<!-- css:ssä on määritetty vain yksi kuva tälle elementille --> 
+		
+		</div>
+		
+		<div id="back">
+			<div id="backtext1">nurture</div>
+			<div id="backtext2"><dl>
+					<dt>lifelike</dt>
+					<dt>look at the sky</dt>
+					<dt>get your wish</dt>
+					<dt>wind tempos</dt>
+					<dt>musican</dt>
+					<dt>do-re-mi-fa-so-la-ti-do</dt>
+					<dt>mother</dt>
+					<dt>dullscythe</dt>
+					<dt>sweet time</dt>
+					<dt>mirror</dt>
+					<dt>something comforting</dt>
+					<dt>blossom</dt>
+					<dt>unfold</dt>
+					<dt>trying to feel alive</dt>
+					</dl></div>
+			<div id="backlogo"></div>			
+		</div>
+		
+	</div>
+	</body>
+</html>

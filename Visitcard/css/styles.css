@@ -1,0 +1,48 @@
+#visitcard{
+	width:600px;
+	height:350px;
+	border: 10px gray;
+	border-style: inset;
+	position: relative;
+	background-color: rgba(50,50,50,0.2);
+	background-image: url(../images/taustakuva.png);
+	background-size: 100% 100%;
+	animation: tausta 8s infinite;
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 30px;
+	overflow: hidden;
+	border-radius: 5px;
+	text-shadow: 1px 1px 1px gray;
+}
+#nimet{
+	position: absolute;
+	top: -20px;
+	left: 300px;
+	font-size: 50px;
+	font-weight: bold;
+}
+#tittelit{
+	position: absolute;
+	top: 85px;
+	left: 300px;	
+}
+#puhnro{
+	position: absolute;
+	top: 125px;
+	left: 300px;	
+}
+#email{
+	position: absolute;
+	top: 160px;
+	left: 300px;
+}
+#emoji{
+	position: absolute;
+	top: 160px;
+	left: 510px;
+	font-size: 90px;
+	font-family: "Arial", Sans-serif;
+}
+@keyframes tausta {
+		50% {background-color: black;}
+}

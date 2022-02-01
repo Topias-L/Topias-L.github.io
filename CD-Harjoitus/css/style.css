@@ -1,0 +1,150 @@
+body{
+	position:absolute;
+	background-color: rgba(50,50,50,1);
+	margin-top: 40px;
+	margin-left: 40px;
+}
+
+/* Tässä alkaa flip animaatio */
+
+#flip{
+	position: absolute;
+	top: 120px;
+	width: 600px;
+	height: 600px;
+}
+
+#fliptext{
+	position: absolute;
+	top: 60px;
+	color: rgba(200,200,200,1);
+	height: 50px;
+	width: 120px;
+	background-color: rgba(70,70,70,1);
+	border: 2px solid;
+}
+
+#flip:hover > #front{
+	transform: rotateY(180deg);
+}
+
+#flip:hover > #back{
+	transform: rotateY(0deg);
+}
+
+#flip:hover > #disk{
+	transform: rotateY(180deg);
+}
+
+#flip:hover > #diskback{
+	transform: rotateY(0deg);
+}
+
+/* Tässä alkaa etukansi */
+
+#front{
+	position: absolute;
+	top: 0px;
+	background-image: url(../images/front_bg.png);
+	background-size: cover;
+	z-index: 7;
+	width:600px;
+	height:600px;
+	backface-visibility: hidden;
+	transition: all 1s ease-in-out;
+	transform: rotateY(0deg);
+}
+
+/* Tässä alkaa takakansi */
+
+#back{
+	position: absolute;
+	top: 0px;
+	background-image: url(../images/back_bg.png);
+	background-size: cover;
+	z-index: 7;
+	width:600px;
+	height:600px;
+	backface-visibility: hidden;
+	transition: all 1s ease-in-out;
+	transform: rotateY(-180deg);
+}
+
+#backtext1{
+	position: absolute;
+	top: 135px;
+	left: 150px;
+	color: rgba(90,90,90,0.85);
+	font-stretch: expanded;
+	letter-spacing: 9px;
+}
+
+#backtext2{
+	position: absolute;
+	top: 160px;
+	left: 190px;
+	color: rgba(90,90,90,0.85);
+	font-size: 13px;
+	font-stretch: expanded;
+	text-align: center;
+	letter-spacing: 5px;
+	line-height: 17px;
+}
+
+#backlogo{
+	position: absolute;
+	top: 0px;
+	left: 280px;
+	background-image: url(../images/logo_white.png);
+	background-size: cover;
+	height: 125px;
+	width: 175px;
+}
+
+/* Tässä alkaa Levyn koodi */
+
+#diskshow{
+	position: relative;
+	top: 0px;
+	color: rgba(200,200,200,1);
+	height: 50px;
+	width: 120px;
+	background-color: rgba(70,70,70,1);
+	border: 2px solid;
+}
+
+#disk{
+	position: absolute;
+	top: 20px;
+	background-image: url(../images/disk.png);
+	background-size: cover;
+	z-index: 3;
+	width:550px;
+	height:550px;
+	backface-visibility: hidden;
+	transition: all 1s ease-in-out;
+	transform: rotateY(0deg);
+}
+
+#diskback{
+	position: absolute;
+	top: 0px;
+	background-image: url(../images/disk_back.png);
+	background-size: cover;
+	z-index: 3;
+	width:550px;
+	height:550px;
+	backface-visibility: hidden;
+	transition: all 1s ease-in-out;
+	transform: rotateY(180);
+}
+
+.visible{
+	left: 400px;
+}
+
+.hidden{
+	left: 35px;
+}
+
+

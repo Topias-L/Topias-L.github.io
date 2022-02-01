@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Laskurinappi</title>
+		<link rel="Stylesheet" href="css/styles.css" type="text/css">
+		<script>
+			function AddNum1() {
+				var laskuri = parseInt(document.getElementById("nappi1").innerHTML);
+				laskuri++;
+				//console.log(laskuri);
+				document.getElementById("nappi1").innerHTML = laskuri;
+			}
+			function AddNum2() {
+				var laskuri = parseInt(document.getElementById("nappi2").innerHTML);
+				laskuri++;
+				//console.log(laskuri);
+				document.getElementById("nappi2").innerHTML = laskuri;
+			}
+			function AddNum3() {
+				var laskuri = parseInt(document.getElementById("nappi3").innerHTML);
+				laskuri++;
+				//console.log(laskuri);
+				document.getElementById("nappi3").innerHTML = laskuri;
+			}
+			function AddNum4() {
+				var laskuri = parseInt(document.getElementById("nappi4").innerHTML);
+				laskuri++;
+				//console.log(laskuri);
+				document.getElementById("nappi4").innerHTML = laskuri;
+			}
+			function AddNum5() {
+				var laskuri = parseInt(document.getElementById("nappi5").innerHTML);
+				laskuri++;
+				//console.log(laskuri);
+				document.getElementById("nappi5").innerHTML = laskuri;
+			}
+			function Message() {
+				document.getElementById("msg").setAttribute("class","visible");
+				setTimeout(function(){
+						document.getElementById("msg").setAttribute("class","hidden");
+				}, 2000);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="background">Asiakaspalaute</div>
+		<div id="text">Miten arvostelisit palvelujamme?</div>
+		
+		<div id="msg">Kiitos Palautteestasi!</div>
+		
+		<div id="nappi1">0</div>
+		<button class="button button1" onClick="AddNum1();Message();">★★★★★</button>
+		<div id="nappi2">0</div>
+		<button class="button button2" onClick="AddNum2();Message();">★★★★</button>
+		<div id="nappi3">0</div>
+		<button class="button button3" onClick="AddNum3();Message();">★★★</button>
+		<div id="nappi4">0</div>
+		<button class="button button4" onClick="AddNum4();Message();">★★</button>
+		<div id="nappi5">0</div>
+		<button class="button button5" onClick="AddNum5();Message();">★</button>
+	</body>
+</html>
