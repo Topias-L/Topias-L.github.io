@@ -1,0 +1,223 @@
+*, html{
+	padding: 0px;
+	margin: 0px;
+	background-color: rgba(20,20,20,1)
+}
+
+#background{
+	position: absolute;
+	margin: 40px;
+	height: 680px;
+	width: 980px;
+	background-image: url(../images/bg_pattern.png);
+	background-size: cover;
+	background-color: rgba(20,20,30,1);
+	padding: 20px;
+	
+	/* Border */
+	
+	border: 8px solid;
+	border-radius: 10px;
+	border-color: rgba(30,30,50,1);
+	
+	/* Text */
+	
+	text-align: right;
+	font-family: 'Outfit', sans-serif;
+	font-size: 40px;
+	color: rgba(180,180,200,1);
+}
+
+#info{
+	position: absolute;
+	background-color: transparent;
+	top: 140px;
+	left: 620px;
+	
+	/* Text */
+	
+	text-align: right;
+	font-family: 'Outfit', sans-serif;
+	font-size: 20px;
+	color: rgba(180,180,200,1);
+}
+
+#info b {
+	background-color: transparent;
+}
+
+#radio1, #radio2, #radio3, #radio4, #radio5 {
+	position: absolute;
+	margin: 20px;
+	height: 60px;
+	width: 375px;
+	left: 50px;
+	background: linear-gradient(180deg, rgba(15,15,30,0.6) 40%, rgba(25,25,45,1) 100%);
+	
+	/* Border */
+	
+	border: 4px solid;
+	border-radius: 8px;
+	border-color: rgba(30,30,50,1);
+	
+	/* Text */
+	
+	padding: 10px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 20px;
+	color: rgba(180,180,200,1);
+}
+
+#playlist b {
+	background-color: transparent;
+}
+
+#radioBTN1, #radioBTN2, #radioBTN3, #radioBTN4, #radioBTN5 {
+	position: absolute;
+	margin-left: 395px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	border: none;
+	outline: none;
+	background-color: rgba(20,20,35,1);
+	background-image: url(../images/button_playsml.png);
+	object-fit: cover;
+	display: inline-block;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#radioBTN1:hover, #radioBTN2:hover, #radioBTN3:hover, #radioBTN4:hover, #radioBTN5:hover {
+	background-color: rgba(40,40,50,1);
+}
+
+#radio1 {
+	top: 50px;
+}
+#radioBTN1 {
+	top: 89px;
+}
+#radioBTN1.active {
+	background-image: url(../images/button_pausesml.png);
+}
+
+#radio2 {
+	top: 160px;
+}
+#radioBTN2 {
+	top: 199px;
+}
+#radioBTN2.active {
+	background-image: url(../images/button_pausesml.png);
+}
+
+#radio3 {
+	top: 270px;
+}
+#radioBTN3 {
+	top: 309px;
+}
+#radioBTN3.active {
+	background-image: url(../images/button_pausesml.png);
+}
+
+#radio4 {
+	top: 380px;
+}
+#radioBTN4 {
+	top: 419px;
+}
+#radioBTN4.active {
+	background-image: url(../images/button_pausesml.png);
+}
+
+#radio5 {
+	top: 490px;
+}
+#radioBTN5 {
+	top: 529px;
+}
+#radioBTN5.active {
+	background-image: url(../images/button_pausesml.png);
+}
+
+#bar{
+	position: absolute;
+	margin: 40px;
+	top: 580px;
+	height: 120px;
+	width: 1000px;
+	background-image: url(../images/barbg_pattern.png);
+	background-size: cover;
+	
+	/* Border */
+	
+	border-radius: 10px;
+	border: 8px solid;
+	border-color: rgba(30,30,50,1);
+	
+	/* Text */
+	
+	padding-top: 20px;
+	padding-left: 20px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 30px;
+	color: rgba(180,180,200,1);
+}
+
+#bar b {
+	background-color: transparent;
+}
+
+#volume{
+	position: absolute;
+	top: 680px;
+	left: 700px;
+	background-color: transparent;
+}
+
+.slider{
+	height: 30px;
+	width: 200px;
+	color: rgba(70,70,90,1);
+}
+
+.button1{
+	position: absolute;
+	margin-top: 657px;
+	margin-left: 950px;
+	height: 75px;
+	width: 75px;
+	border: none;
+	outline: none;
+	border-radius: 50%;
+	background-color: rgba(20,20,35,1);
+	background-image: url(../images/button_pause.png);
+	display: inline-block;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.button1.active{
+	background-image: url(../images/button_play.png);	
+}
+
+.button1:hover {
+	background-color: rgba(40,40,50,1);
+}
+
+#copyright{
+	position: absolute;
+	background-color: transparent;
+	top: 720px;
+	left: 40px;
+	
+	/* Text */
+	
+	padding-top: 20px;
+	padding-left: 20px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 14px;
+	color: rgba(60,60,100,1);
+}

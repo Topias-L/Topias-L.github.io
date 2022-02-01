@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#nappula{
+	width: 200px;
+	height: 80px;
+	border: 1px solid #000;
+}
+
+.pause{
+	background-color: green;
+}
+
+.play{
+	background-color: orange;
+}
+</style>
+<script>
+function toggle(){
+	var elem = document.getElementById("nappula");
+		if(elem.getAttribute("class") == "pause"){
+			elem.setAttribute("class", "play");
+			elem.innerHTML = "play";
+		}
+		else{
+			elem.setAttribute("class", "pause");
+			elem.innerHTML = "pause";
+		}
+}
+</script>
+</head>
+<body>
+
+	<div id="nappula" class="pause" onClick="toggle();">PAUSE</div>
+
+</body>
+</html>
