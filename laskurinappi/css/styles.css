@@ -1,6 +1,6 @@
 body{
 	background-color: rgba(31,30,32,1);
-	padding: 15px;
+	padding: 0px;
 }
 
 	/* Paneelin tausta */
@@ -56,7 +56,7 @@ body{
 
 .button1,.button2,.button3,.button4,.button5 {
 	position: absolute;
-	top: 360px;
+	top: 350px;
 	height: 173px;
 	width: 175px;
 	border: 4px solid;
@@ -70,27 +70,27 @@ body{
 
 .button1 {
 	background-color: rgba(50,255,30,1);
-	left: 55px;
+	left: 40px;
 }
 
 .button2 {
 	background-color: rgba(170,255,33,1);
-	left: 255px;
+	left: 240px;
 }
 
 .button3 {
 	background-color: rgba(255,255,40,1);
-	left: 455px;
+	left: 440px;
 }
 
 .button4 {
 	background-color: rgba(255,150,30,1);
-	left: 655px;
+	left: 640px;
 }
 
 .button5 {
 	background-color: rgba(255,70,30,1);
-	left: 855px;
+	left: 840px;
 }
 
 	/* Efektien lisäys napeille kun nappia painetaan */
@@ -125,7 +125,7 @@ body{
 #msg{
 	position: absolute;
 	top: 250px;
-	left: 325px;
+	left: 300px;
 	
 	font-family: arial;
 	font-size: 50px;
@@ -159,7 +159,7 @@ body{
 
 #nappi1,#nappi2,#nappi3,#nappi4,#nappi5 {
 	position: absolute;
-	top: 340px;
+	top: 330px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	text-align: center;
@@ -169,21 +169,21 @@ body{
 }
 
 #nappi1 {
-	left: 95px;
+	left: 80px;
 }
 
 #nappi2 {
-	left: 295px;
+	left: 280px;
 }
 
 #nappi3 {
-	left: 495px;
+	left: 480px;
 }
 
 #nappi4 {
-	left: 695px;
+	left: 680px;
 }
 
 #nappi5 {
-	left: 895px;
+	left: 880px;
 }
