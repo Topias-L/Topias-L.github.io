@@ -1,14 +1,14 @@
 body{
 	background-color: rgba(31,30,33,1);
-	padding: 50px;
+	padding: 30px;
 }
 
 	/* Paneelin tausta */
 
 #background {
 	position: absolute;
-	width: 650px;
-	height: 400px;
+	width: 1040px;
+	height: 620px;
 	background-color: rgba(50,50,50,1);
 	border: 10px solid;
 	border-color: rgba(65,64,66,1);
@@ -18,7 +18,7 @@ body{
 	/* Paneelin tekstin asetukset */
 	
 	font-family: arial;
-	font-size: 30px;
+	font-size: 50px;
 	line-height: 70px;
 	color: white;
 	text-align: center;
@@ -26,12 +26,12 @@ body{
 
 #text {
 	position: absolute;
-	top: 120px;
-	left: 200px;
+	top: 150px;
+	left: 265px;
 	z-index: 0;
 	
 	font-family: arial;
-	font-size: 25px;
+	font-size: 40px;
 	line-height: 80px;
 	color: white;
 	text-align: center;
@@ -56,41 +56,41 @@ body{
 
 .button1,.button2,.button3,.button4,.button5 {
 	position: absolute;
-	top: 300px;
-	height: 103px;
-	width: 105px;
+	top: 400px;
+	height: 173px;
+	width: 175px;
 	border: 4px solid;
 	box-sizing: border-box;
 	border-color: rgba(20,20,20,1);
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 30px;
 }
 
 	/* Yksittäiset asetukset napeille */
 
 .button1 {
 	background-color: rgba(50,255,30,1);
-	left: 100px;
+	left: 75px;
 }
 
 .button2 {
 	background-color: rgba(170,255,33,1);
-	left: 220px;
+	left: 275px;
 }
 
 .button3 {
 	background-color: rgba(255,255,40,1);
-	left: 340px;
+	left: 475px;
 }
 
 .button4 {
 	background-color: rgba(255,150,30,1);
-	left: 460px;
+	left: 675px;
 }
 
 .button5 {
 	background-color: rgba(255,70,30,1);
-	left: 580px;
+	left: 875px;
 }
 
 	/* Efektien lisäys napeille kun nappia painetaan */
@@ -124,11 +124,11 @@ body{
 
 #msg{
 	position: absolute;
-	top: 170px;
-	left: 250px;
+	top: 250px;
+	left: 325px;
 	
 	font-family: arial;
-	font-size: 30px;
+	font-size: 50px;
 	line-height: 80px;
 	color: transparent;
 	text-align: center;
@@ -159,7 +159,7 @@ body{
 
 #nappi1,#nappi2,#nappi3,#nappi4,#nappi5 {
 	position: absolute;
-	top: 280px;
+	top: 360px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	text-align: center;
@@ -169,21 +169,21 @@ body{
 }
 
 #nappi1 {
-	left: 104px;
+	left: 115px;
 }
 
 #nappi2 {
-	left: 224px;
+	left: 315px;
 }
 
 #nappi3 {
-	left: 344px;
+	left: 515px;
 }
 
 #nappi4 {
-	left: 464px;
+	left: 715px;
 }
 
 #nappi5 {
-	left: 584px;
+	left: 915px;
 }
