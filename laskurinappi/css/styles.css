@@ -1,13 +1,12 @@
 body{
 	background-color: rgba(20,20,20,1);
-	padding: 0px;
 }
 
 	/* Paneelin tausta */
 
 #background {
 	position: absolute;
-	width: 1000px;
+	width: 980px;
 	height: 540px;
 	background-image: url(../images/background.png);
 	border: 10px solid;
@@ -81,27 +80,27 @@ body{
 
 .button1 {
 	background-color: rgba(50,255,30,1);
-	left: 35px;
+	left: 25px;
 }
 
 .button2 {
 	background-color: rgba(170,255,33,1);
-	left: 235px;
+	left: 220px;
 }
 
 .button3 {
 	background-color: rgba(255,255,40,1);
-	left: 435px;
+	left: 415px;
 }
 
 .button4 {
 	background-color: rgba(255,150,30,1);
-	left: 635px;
+	left: 610px;
 }
 
 .button5 {
 	background-color: rgba(255,60,20,1);
-	left: 835px;
+	left: 805px;
 }
 
 	/* Efektien lisäys napeille kun nappia painetaan */
