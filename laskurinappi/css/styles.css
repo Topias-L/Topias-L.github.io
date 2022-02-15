@@ -6,7 +6,7 @@ body{
 
 #background {
 	position: absolute;
-	width: 980px;
+	width: 900px;
 	height: 540px;
 	background-image: url(../images/background.png);
 	border: 10px solid;
