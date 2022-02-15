@@ -6,7 +6,8 @@ body{
 
 #background {
 	position: absolute;
-	width: 940px;
+	left: 0px;
+	width: 1000px;
 	height: 540px;
 	background-image: url(../images/background.png);
 	border: 10px solid;
@@ -80,27 +81,27 @@ body{
 
 .button1 {
 	background-color: rgba(50,255,30,1);
-	left: 25px;
+	left: 30px;
 }
 
 .button2 {
 	background-color: rgba(170,255,33,1);
-	left: 210px;
+	left: 215px;
 }
 
 .button3 {
 	background-color: rgba(255,255,40,1);
-	left: 395px;
+	left: 400px;
 }
 
 .button4 {
 	background-color: rgba(255,150,30,1);
-	left: 580px;
+	left: 585px;
 }
 
 .button5 {
 	background-color: rgba(255,60,20,1);
-	left: 765px;
+	left: 770px;
 }
 
 	/* Efektien lisäys napeille kun nappia painetaan */
