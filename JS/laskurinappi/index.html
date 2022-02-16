@@ -13,7 +13,6 @@
 				laskuri++;
 				console.log("Laskuri 1:n uusi arvo: " + laskuri);
 				document.getElementById("nro1").innerHTML = laskuri;
-				elem.disabled=true;
 				btnDelay(elem);
 			}
 			function AddNum2(elem) {
@@ -21,7 +20,6 @@
 				laskuri++;
 				console.log("Laskuri 2:n uusi arvo: " + laskuri);
 				document.getElementById("nro2").innerHTML = laskuri;
-				elem.disabled=true;
 				btnDelay(elem);
 			}
 			function AddNum3(elem) {
@@ -29,7 +27,6 @@
 				laskuri++;
 				console.log("Laskuri 3:n uusi arvo: " + laskuri);
 				document.getElementById("nro3").innerHTML = laskuri;
-				elem.disabled=true;
 				btnDelay(elem);
 			}
 			function AddNum4(elem) {
@@ -37,7 +34,6 @@
 				laskuri++;
 				console.log("Laskuri 4:n uusi arvo: " + laskuri);
 				document.getElementById("nro4").innerHTML = laskuri;
-				elem.disabled=true;
 				btnDelay(elem);
 			}
 			function AddNum5(elem) {
@@ -45,7 +41,6 @@
 				laskuri++;
 				console.log("Laskuri 5:n uusi arvo: " + laskuri);
 				document.getElementById("nro5").innerHTML = laskuri;
-				elem.disabled=true;
 				btnDelay(elem);
 			}
 			function Message() {
@@ -55,8 +50,9 @@
 				}, 2000);
 			}
 			function btnDelay(elem) {
+				document.querySelectorAll("button").forEach(el => el.setAttribute("disabled", true));
 				setTimeout(function(){
-					elem.disabled=false;
+					document.querySelectorAll("button").forEach(el => el.removeAttribute("disabled"));
 					console.log("palautetaan nappulan klikattavuus");
 				},2000);
 			}
