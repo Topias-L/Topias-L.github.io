@@ -1,5 +1,5 @@
 body{
-	background-color: rgba(20,20,20,1);
+	background-color: white;
 }
 
 	/* Paneelin tausta */
@@ -7,21 +7,23 @@ body{
 #background {
 	position: absolute;
 	left: 0px;
-	width: 1000px;
+	width: 960px;
 	height: 540px;
 	background-image: url(../images/background.png);
 	border: 10px solid;
-	border-color: rgba(35,35,35,1);
+	border-color: black;
 	border-radius: 20px;
 	z-index: -1;
 	
 	/* Paneelin tekstin asetukset */
 	
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 50px;
-	line-height: 90px;
-	color: rgba(190,190,190,1);
-	text-align: center;
+	line-height: 80px;
+	color: black;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 40px;
 	
 	animation-name: bgAnim;
 	animation-duration: 20s;
@@ -37,14 +39,14 @@ body{
 
 #text {
 	position: absolute;
-	top: 110px;
-	left: 255px;
+	top: 90px;
+	left: 160px;
 	z-index: 0;
 	
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 40px;
 	line-height: 80px;
-	color: rgba(190,190,190,1);
+	color: black;
 	text-align: center;
 }
 
@@ -72,7 +74,7 @@ body{
 	width: 175px;
 	border: 4px solid;
 	box-sizing: border-box;
-	border-color: rgba(35,35,35,1);
+	border-color: black;
 	font-weight: bold;
 	font-size: 30px;
 }
@@ -136,9 +138,9 @@ body{
 #msg{
 	position: absolute;
 	top: 230px;
-	left: 300px;
+	left: 278px;
 	
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 50px;
 	line-height: 80px;
 	color: transparent;
@@ -163,44 +165,52 @@ body{
 
 @keyframes showAnim {
 	0%,100% {opacity: 0; top: 220px;}
-	20%,80% {opacity: 1; color: white; top: 200px;}
+	20%,80% {opacity: 1; color: black; top: 200px;}
 }
 
 	/* Laskuri numerot jokaiselle napille */
 
-#nappi1,#nappi2,#nappi3,#nappi4,#nappi5 {
+#nro1,#nro2,#nro3,#nro4,#nro5 {
 	position: absolute;
 	top: 315px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	text-align: center;
-	color: white;
+	color: black;
 	margin-left: 45px;
 	z-index: 2;
 }
 
-#nappi1 {
+#nro1 {
 	left: 70px;
 }
 
-#nappi2 {
+#nro2 {
 	left: 265px;
 }
 
-#nappi3 {
+#nro3 {
 	left: 460px;
 }
 
-#nappi4 {
+#nro4 {
 	left: 655px;
 }
 
-#nappi5 {
+#nro5 {
 	left: 850px;
 }
 
 .Tiedot {
 	position: absolute;
-	top: 50px;
-	left: 50px;
+	background-color: transparent;
+	border: none;
+	top: 30px;
+	left: 800px;
+	height: 130px;
+	width: 180px;
+	background-image: url(../images/Luovi_logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 9999;
 }
