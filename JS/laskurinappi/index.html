@@ -8,41 +8,57 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 		<script>
-			function AddNum1() {
+			function AddNum1(elem) {
 				var laskuri = parseInt(document.getElementById("nro1").innerHTML);
 				laskuri++;
 				console.log("Laskuri 1:n uusi arvo: " + laskuri);
 				document.getElementById("nro1").innerHTML = laskuri;
+				elem.disabled=true;
+				btnDelay(elem);
 			}
-			function AddNum2() {
+			function AddNum2(elem) {
 				var laskuri = parseInt(document.getElementById("nro2").innerHTML);
 				laskuri++;
 				console.log("Laskuri 2:n uusi arvo: " + laskuri);
 				document.getElementById("nro2").innerHTML = laskuri;
+				elem.disabled=true;
+				btnDelay(elem);
 			}
-			function AddNum3() {
+			function AddNum3(elem) {
 				var laskuri = parseInt(document.getElementById("nro3").innerHTML);
 				laskuri++;
 				console.log("Laskuri 3:n uusi arvo: " + laskuri);
 				document.getElementById("nro3").innerHTML = laskuri;
+				elem.disabled=true;
+				btnDelay(elem);
 			}
-			function AddNum4() {
+			function AddNum4(elem) {
 				var laskuri = parseInt(document.getElementById("nro4").innerHTML);
 				laskuri++;
 				console.log("Laskuri 4:n uusi arvo: " + laskuri);
 				document.getElementById("nro4").innerHTML = laskuri;
+				elem.disabled=true;
+				btnDelay(elem);
 			}
-			function AddNum5() {
+			function AddNum5(elem) {
 				var laskuri = parseInt(document.getElementById("nro5").innerHTML);
 				laskuri++;
 				console.log("Laskuri 5:n uusi arvo: " + laskuri);
 				document.getElementById("nro5").innerHTML = laskuri;
+				elem.disabled=true;
+				btnDelay(elem);
 			}
 			function Message() {
 				document.getElementById("msg").setAttribute("class","visible");
 				setTimeout(function(){
 						document.getElementById("msg").setAttribute("class","hidden");
 				}, 2000);
+			}
+			function btnDelay(elem) {
+				setTimeout(function(){
+					elem.disabled=false;
+					console.log("palautetaan nappulan klikattavuus");
+				},2000);
 			}
 			function TietojenLähetys() {
 				var value1 = document.getElementById("nro1").innerHTML;
@@ -62,15 +78,16 @@
 		<div id="msg">Kiitos Palautteestasi!</div>
 		
 		<div id="nro1">0</div>
-		<button class="button button1" onClick="AddNum1();Message();">★★★★★</button>
 		<div id="nro2">0</div>
-		<button class="button button2" onClick="AddNum2();Message();">★★★★</button>
 		<div id="nro3">0</div>
-		<button class="button button3" onClick="AddNum3();Message();">★★★</button>
 		<div id="nro4">0</div>
-		<button class="button button4" onClick="AddNum4();Message();">★★</button>
 		<div id="nro5">0</div>
-		<button class="button button5" onClick="AddNum5();Message();">★</button>
+		
+		<button type="button" class="button button1" onClick="AddNum1(this);Message();">★★★★★</button>
+		<button type="button" class="button button2" onClick="AddNum2(this);Message();">★★★★</button>
+		<button type="button" class="button button3" onClick="AddNum3(this);Message();">★★★</button>
+		<button type="button" class="button button4" onClick="AddNum4(this);Message();">★★</button>
+		<button type="button" class="button button5" onClick="AddNum5(this);Message();">★</button>
 		
 		<button class="button Tiedot" onClick="TietojenLähetys();"></button>
 		

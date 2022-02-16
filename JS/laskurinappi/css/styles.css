@@ -50,33 +50,27 @@ body{
 	text-align: center;
 }
 
-	/* Nappien perusasetukset */
-
-.button {
-	position: absolute;
-	border-color: rgba(70,50,90,1);
-	border-radius: 40px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	z-index: 2;
-}
-
-	/* Nappien jaetut asetukset */
+	/* Nappien asetukset */
 
 .button1,.button2,.button3,.button4,.button5 {
 	position: absolute;
 	top: 335px;
 	height: 173px;
 	width: 175px;
-	border: 4px solid;
 	box-sizing: border-box;
-	border-color: black;
+	
+	border: 4px solid black;
+	border-radius: 40px;
+	
 	font-weight: bold;
 	font-size: 30px;
+	text-align: center;
+	text-decoration: none;
+	
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+	z-index: 2;
 }
 
 	/* Yksittäiset asetukset napeille */
@@ -137,7 +131,7 @@ body{
 
 #msg{
 	position: absolute;
-	top: 230px;
+	top: 200px;
 	left: 278px;
 	
 	font-family: 'Open Sans', sans-serif;
@@ -151,7 +145,7 @@ body{
 
 .visible {
 	animation-name: showAnim;
-	animation-duration: 1.5s;
+	animation-duration: 2s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-out;
 	animation-fill-mode: both;
@@ -164,8 +158,14 @@ body{
 }
 
 @keyframes showAnim {
-	0%,100% {opacity: 0; top: 220px;}
-	20%,80% {opacity: 1; color: black; top: 200px;}
+	0%,100% {opacity: 0; top: 200px;}
+	20%,80% {opacity: 1; color: black; top: 180px;}
+}
+
+	/* Nappien timeout animaatio */
+
+button[type="button"]:disabled {
+	opacity: 0.75;
 }
 
 	/* Laskuri numerot jokaiselle napille */
@@ -176,7 +176,7 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	text-align: center;
-	color: black;
+	color: transparent;
 	margin-left: 45px;
 	z-index: 2;
 }
