@@ -59,7 +59,6 @@
 				document.querySelectorAll("button").forEach(el => el.setAttribute("disabled", true));
 				setTimeout(function(){
 					document.querySelectorAll("button").forEach(el => el.removeAttribute("disabled"));
-					console.log("palautetaan nappulan klikattavuus");
 				},2000);
 			}
 			function TietojenLähetys() {
@@ -68,7 +67,31 @@
 				var value3 = document.getElementById("nro3").innerHTML;
 				var value4 = document.getElementById("nro4").innerHTML;
 				var value5 = document.getElementById("nro5").innerHTML;
-				window.alert("Vierailupäivän palautteet:\n5/5: " + value1 + "\n4/5: " + value2 + "\n3/5: " + value3 + "\n2/5: " + value4 + "\n1/5: " + value5);
+				var sposti = prompt("Vierailupäivän palautteet:\n5/5: " + value1 + " | 4/5: " + value2 + " | 3/5: " + value3 + " | 2/5: " + value4 + " | 1/5: " + value5
+				+ "\n\nKenelle palautteet laitetaan?\nSyötä saajan Sähköposti osoite.\n\nHUOM!\nPalautuksen lähettämisen jälkeen sivu päivitetään 10 sekuntin viiveellä!", "testi@gmail.com");
+				if (sposti == null) {
+					console.log("Palautteen lähettäminen peruutettu.");
+				} else {
+					var date = new Date();
+					var today = date.getDate();
+					var month = date.getMonth()+1;
+					var year = date.getFullYear();
+					
+					var hour = date.getHours();
+					var minute = date.getMinutes();
+					
+					var pvm = today + "." + month + "." + year;
+					var klo = hour + ":" + minute;
+					var viesti = "Lähetetty: " + pvm + " Klo: " + klo + "\n\nVierailupäivän kävijäpalaute\n1/5: " + value1 + "\n2/5: " + value2 + 
+								 "\n3/5: " + value3 + "\n4/5: " + value4 + "\n5/5: " + value5 + 
+								 "\n\nTämän viestin on lähettänyt koodi, joka on Vierailupäivän kävijäpalaute sovelluksesta.";
+					console.log("Palautteet lähtetetty osoitteeseen: " + sposti);
+					console.log(viesti);
+					console.warn("HUOM! Sivu päivittyy uudelleen 10 sekuntin päästä palautuksen lähttämisen jälkeen!");
+					setTimeout(function(){
+						window.location.reload();
+					}, 10000);
+				}
 			}
 		</script>
 	</head>

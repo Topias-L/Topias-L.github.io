@@ -24,16 +24,17 @@ body{
 	font-weight: bold;
 	text-align: left;
 	padding-left: 40px;
+	user-select: none;
 	
 	animation-name: bgAnim;
-	animation-duration: 20s;
+	animation-duration: 40s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
 
 @keyframes bgAnim {
 	0% {background-position: 0px 0px;}
-	50% {background-position: -50px -50px;}
+	50% {background-position: -100px -100px;}
 	100% {background-position: 0px 0px;}
 }
 
@@ -48,6 +49,7 @@ body{
 	line-height: 80px;
 	color: black;
 	text-align: center;
+	user-select: none;
 }
 
 	/* Nappien asetukset */
@@ -60,10 +62,10 @@ body{
 	box-sizing: border-box;
 	
 	border: 4px solid black;
-	border-radius: 40px;
+	border-radius: 30px;
 	
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 34px;
 	text-align: center;
 	text-decoration: none;
 	
@@ -71,6 +73,7 @@ body{
 	margin: 4px 2px;
 	cursor: pointer;
 	z-index: 2;
+	user-select: none;
 }
 
 	/* Yksittäiset asetukset napeille */
@@ -139,6 +142,7 @@ body{
 	line-height: 80px;
 	color: transparent;
 	text-align: center;
+	user-select: none;
 }
 
 	/* Animaatio viestin ilmestymiselle */
@@ -157,6 +161,8 @@ body{
 	color: transparent;
 }
 
+	/* Animaatio palautus viestiin */
+
 @keyframes showAnim {
 	0%,100% {opacity: 0; top: 200px;}
 	20%,80% {opacity: 1; color: black; top: 180px;}
@@ -165,7 +171,8 @@ body{
 	/* Nappien timeout animaatio */
 
 button[type="button"]:disabled {
-	opacity: 0.75;
+	opacity: 0.8;
+	cursor: not-allowed;
 }
 
 	/* Laskuri numerot jokaiselle napille */
@@ -179,6 +186,7 @@ button[type="button"]:disabled {
 	color: transparent;
 	margin-left: 45px;
 	z-index: 2;
+	user-select: none;
 }
 
 #nro1 {
@@ -201,6 +209,8 @@ button[type="button"]:disabled {
 	left: 850px;
 }
 
+	/* Luovi logon, ja tietojen palautus napin lisääminen */
+
 .Tiedot {
 	position: absolute;
 	background-color: transparent;
@@ -212,5 +222,5 @@ button[type="button"]:disabled {
 	background-image: url(../images/Luovi_logo.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	z-index: 9999;
+	z-index: 99;
 }
