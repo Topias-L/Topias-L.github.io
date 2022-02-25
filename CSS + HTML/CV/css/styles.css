@@ -2,6 +2,17 @@ body {
 	background-color: gray;
 }
 
+#b64{
+	position: absolute;
+	color: white;
+	font-size: 10px;
+	opacity: 0.1;
+	transform: rotate(90deg);
+	top: 565px;
+	left: 255px;
+	z-index: 99;
+}
+
 #mainBG {
 	position: absolute;
 	height: 1120px;
