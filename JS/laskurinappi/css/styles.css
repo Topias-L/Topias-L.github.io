@@ -7,9 +7,15 @@ body{
 
 #background {
 	position: absolute;
-	left: 0px;
 	width: 960px;
 	height: 540px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	
+	/* Paneelin visuaalisia asetuksia */
+	
 	background-image: url(../images/background.png);
 	border: 10px solid;
 	border-color: black;
@@ -20,7 +26,7 @@ body{
 	
 	font-family: 'Open Sans', sans-serif;
 	font-size: 50px;
-	line-height: 80px;
+	line-height: 100px;
 	color: black;
 	font-weight: bold;
 	text-align: left;
@@ -42,12 +48,13 @@ body{
 #text {
 	position: absolute;
 	top: 90px;
-	left: 160px;
+	left: 140px;
 	z-index: 0;
 	
 	font-family: 'Open Sans', sans-serif;
 	font-size: 40px;
 	line-height: 80px;
+	font-weight: normal;
 	color: black;
 	text-align: center;
 	user-select: none;
@@ -82,27 +89,27 @@ body{
 
 .button1 {
 	background-color: rgba(50,255,30,1);
-	left: 30px;
+	left: 20px;
 }
 
 .button2 {
 	background-color: rgba(170,255,33,1);
-	left: 225px;
+	left: 215px;
 }
 
 .button3 {
 	background-color: rgba(255,255,40,1);
-	left: 420px;
+	left: 410px;
 }
 
 .button4 {
 	background-color: rgba(255,150,30,1);
-	left: 615px;
+	left: 605px;
 }
 
 .button5 {
 	background-color: rgba(255,60,20,1);
-	left: 810px;
+	left: 800px;
 }
 
 	/* Efektien lisäys napeille kun nappia painetaan */
@@ -136,7 +143,7 @@ body{
 
 #msg{
 	position: absolute;
-	top: 200px;
+	top: 240px;
 	left: 278px;
 	
 	font-family: 'Open Sans', sans-serif;
@@ -173,11 +180,12 @@ body{
 	/* Nappien timeout animaatio */
 
 button[type="button"]:disabled {
-	opacity: 0.8;
+	opacity: 0.6;
 	cursor: not-allowed;
 }
 
 	/* Laskuri numerot jokaiselle napille */
+	/* HUOM! Laskurit on laitettu normaalisti color: transparent; , että ne olisi piilossa. */
 
 #nro1,#nro2,#nro3,#nro4,#nro5 {
 	position: absolute;
@@ -190,6 +198,8 @@ button[type="button"]:disabled {
 	z-index: 2;
 	user-select: none;
 }
+
+	/* Laskuri numeroiden yksityiset arvot */
 
 #nro1 {
 	left: 70px;

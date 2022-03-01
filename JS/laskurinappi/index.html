@@ -67,55 +67,58 @@
 				var value3 = document.getElementById("nro3").innerHTML;
 				var value4 = document.getElementById("nro4").innerHTML;
 				var value5 = document.getElementById("nro5").innerHTML;
-				var sposti = prompt("Vierailupäivän palautteet:\n5/5: " + value1 + " | 4/5: " + value2 + " | 3/5: " + value3 + " | 2/5: " + value4 + " | 1/5: " + value5
-				+ "\n\nKenelle palautteet laitetaan?\nSyötä saajan Sähköposti osoite.\n\nHUOM!\nPalautuksen lähettämisen jälkeen sivu päivitetään 10 sekuntin viiveellä!", "testi@gmail.com");
-				if (sposti == null) {
-					console.log("Palautteen lähettäminen peruutettu.");
-				} else {
-					var date = new Date();
-					var today = date.getDate();
-					var month = date.getMonth()+1;
-					var year = date.getFullYear();
+				
+				var date = new Date();
+				var today = date.getDate();
+				var month = date.getMonth()+1;
+				var year = date.getFullYear();
 					
-					var hour = date.getHours();
-					var minute = date.getMinutes();
-					
-					var pvm = today + "." + month + "." + year;
-					var klo = hour + ":" + minute;
-					var viesti = "Lähetetty: " + pvm + " Klo: " + klo + "\n\nVierailupäivän kävijäpalaute\n1/5: " + value1 + "\n2/5: " + value2 + 
-								 "\n3/5: " + value3 + "\n4/5: " + value4 + "\n5/5: " + value5 + 
-								 "\n\nTämän viestin on lähettänyt koodi, joka on Vierailupäivän kävijäpalaute sovelluksesta.";
-					console.log("Palautteet lähtetetty osoitteeseen: " + sposti);
-					console.log(viesti);
-					console.warn("HUOM! Sivu päivittyy uudelleen 10 sekuntin päästä palautuksen lähttämisen jälkeen!");
-					setTimeout(function(){
-						window.location.reload();
-					}, 10000);
+				var hours = date.getHours();
+				var minutes = date.getMinutes();
+				if (minutes < 10) {
+					minutes = "0" + minutes;
 				}
+					
+				var pvm = today + "." + month + "." + year;
+				var klo = hours + ":" + minutes;
+				
+				var sposti = alert("Vierailupäivän palautteet:\n5/5: " + value1 + " | 4/5: " + value2 + " | 3/5: " + value3 + " | 2/5: " + value4 + " | 1/5: " + value5
+				+ "\n\nPalautukset ajalta: " + pvm + " | Klo " + klo);
+			//	if (sposti == null) {
+			//		console.log("Palautteen lähettäminen peruutettu.");
+			//	} else {
+			//		var viesti = "Lähetetty: " + pvm + " Klo: " + klo + "\n\nVierailupäivän kävijäpalaute\n1/5: " + value1 + "\n2/5: " + value2 + 
+			//					 "\n3/5: " + value3 + "\n4/5: " + value4 + "\n5/5: " + value5 + 
+			//					 "\n\nTämän viestin on lähettänyt koodi, joka on Vierailupäivän kävijäpalaute sovelluksesta.";
+			//		console.log("Palautteet lähtetetty osoitteeseen: " + sposti);
+			//		console.log(viesti);
+			//		console.warn("HUOM! Sivu päivittyy uudelleen 10 sekuntin päästä palautuksen lähttämisen jälkeen!");
+			//		setTimeout(function(){
+			//			window.location.reload();
+			//		}, 10000);
+			//	}
 			}
 		</script>
 	</head>
 	<body>
-		<div id="background">Vierailupäivän kävijäpalaute</div>
+		<div id="background">Vierailupäivän kävijäpalaute
+			<div id="text">Mitä pidit kierroksesta?</div>
+			<div id="msg">Kiitos Palautteestasi!</div>
 		
-		<div id="text">Mitä pidit kierroksesta?</div>
-		
-		<div id="msg">Kiitos Palautteestasi!</div>
-		
-		<div id="nro1">0</div>
-		<div id="nro2">0</div>
-		<div id="nro3">0</div>
-		<div id="nro4">0</div>
-		<div id="nro5">0</div>
-		
-		<button type="button" class="button button1" onClick="AddNum1(this);Message();">★★★★★</button>
-		<button type="button" class="button button2" onClick="AddNum2(this);Message();">★★★★</button>
-		<button type="button" class="button button3" onClick="AddNum3(this);Message();">★★★</button>
-		<button type="button" class="button button4" onClick="AddNum4(this);Message();">★★</button>
-		<button type="button" class="button button5" onClick="AddNum5(this);Message();">★</button>
-		
-		<button class="button Tiedot" onClick="TietojenLähetys();"></button>
-		
+			<div id="nro1">0</div>
+			<div id="nro2">0</div>
+			<div id="nro3">0</div>
+			<div id="nro4">0</div>
+			<div id="nro5">0</div>
+			
+			<button type="button" class="button button1" onClick="AddNum1(this);Message();">★★★★★</button>
+			<button type="button" class="button button2" onClick="AddNum2(this);Message();">★★★★</button>
+			<button type="button" class="button button3" onClick="AddNum3(this);Message();">★★★</button>
+			<button type="button" class="button button4" onClick="AddNum4(this);Message();">★★</button>
+			<button type="button" class="button button5" onClick="AddNum5(this);Message();">★</button>
+			
+			<button class="button Tiedot" onClick="TietojenLähetys();"></button>
+		</div>
 	</body>
 </html>
 <!--
