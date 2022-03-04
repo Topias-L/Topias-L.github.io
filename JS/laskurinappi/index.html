@@ -82,21 +82,11 @@
 				var pvm = today + "." + month + "." + year;
 				var klo = hours + ":" + minutes;
 				
-				var sposti = alert("Vierailupäivän palautteet:\n5/5: " + value1 + " | 4/5: " + value2 + " | 3/5: " + value3 + " | 2/5: " + value4 + " | 1/5: " + value5
+				var sposti = prompt("Vierailupäivän palautteet:\n5/5: " + value1 + " | 4/5: " + value2 + " | 3/5: " + value3 + " | 2/5: " + value4 + " | 1/5: " + value5
 				+ "\n\nPalautukset ajalta: " + pvm + " | Klo " + klo);
-			//	if (sposti == null) {
-			//		console.log("Palautteen lähettäminen peruutettu.");
-			//	} else {
-			//		var viesti = "Lähetetty: " + pvm + " Klo: " + klo + "\n\nVierailupäivän kävijäpalaute\n1/5: " + value1 + "\n2/5: " + value2 + 
-			//					 "\n3/5: " + value3 + "\n4/5: " + value4 + "\n5/5: " + value5 + 
-			//					 "\n\nTämän viestin on lähettänyt koodi, joka on Vierailupäivän kävijäpalaute sovelluksesta.";
-			//		console.log("Palautteet lähtetetty osoitteeseen: " + sposti);
-			//		console.log(viesti);
-			//		console.warn("HUOM! Sivu päivittyy uudelleen 10 sekuntin päästä palautuksen lähttämisen jälkeen!");
-			//		setTimeout(function(){
-			//			window.location.reload();
-			//		}, 10000);
-			//	}
+				if (sposti == "Dopas") {
+					document.location.reload();
+				}
 			}
 		</script>
 	</head>
