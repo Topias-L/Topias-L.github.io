@@ -67,7 +67,7 @@ body{
 .lightBTN{
 	position: absolute;
 	margin-top: 475px;
-	margin-left: 775px;
+	margin-left: 778px;
 	height: 50px;
 	width: 144px;
 	background-color: rgba(60,50,70,1);
@@ -164,12 +164,12 @@ body{
 }
 
 #mid{
-	top:335px;
+	top:337px;
 	left:95px;
 }
 
 #cold{
-	top: 430px;
+	top: 427px;
 	left:95px;
 }
 
@@ -236,14 +236,41 @@ body{
 
 #timeNum{
 	position: absolute;
-	top: 150px;
-	left: 580px;
+	top: 145px;
+	left: 560px;
 	padding: 10px;
 	text-align: center;
 	font-family: 'Roboto Mono', monospace;
-	font-size: 23px;
+	font-size: 20px;
+	line-height: 40px;
 	color: rgba(160,140,200,1);
 	z-index: 3;
+}
+
+.dateBTN{
+	position: absolute;
+	margin-top: 250px;
+	margin-left: 550px;
+	height: 50px;
+	width: 150px;
+	background-color: rgba(60,50,70,1);
+	display: inline-block;
+	outline: none;
+	border: solid 2px;
+	border-radius: 10px;
+	border-color: rgb(110,90,140,1);
+	color: rgba(160,140,200,1);
+	text-align: center;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.dateBTN:hover {
+	background-color: rgba(70,60,80,1);
+}
+
+.dateBTN:active {
+	background-color: rgba(50,40,60,1);
 }
 
 #weather{
