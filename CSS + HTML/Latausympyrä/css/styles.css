@@ -181,4 +181,130 @@ body{
 	100%{
 		transform: rotate(320deg);
 	}
-}	
+}
+
+#loader4 {
+	position: absolute;
+	top: 450px;
+	left: 20px;
+}
+
+#box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8 {
+	position: relative;
+	background-color: white;
+	height: 20px;
+	width: 20px;
+}
+
+#box1 {
+	animation: animBox1 1.6s infinite;
+}
+
+#box2 {
+	margin-top: -20px;
+	margin-left: 20px;
+	animation: animBox2 1.6s infinite;
+	animation-delay: 200ms;
+}
+
+#box3 {
+	margin-top: -20px;
+	margin-left: 40px;
+	animation: animBox3 1.6s infinite;
+	animation-delay: 400ms;
+}
+
+#box4 {
+	margin-left: 40px;
+	animation: animBox4 1.6s infinite;
+	animation-delay: 600ms;
+}
+
+#box5 {
+	margin-left: 40px;
+	animation: animBox5 1.6s infinite;
+	animation-delay: 800ms;
+}
+
+#box6 {
+	margin-top: -20px;
+	margin-left: 20px;
+	animation: animBox6 1.6s infinite;
+	animation-delay: 1000ms;
+}
+
+#box7 {
+	margin-top: -20px;
+	animation: animBox7 1.6s infinite;
+	animation-delay: 1200ms;
+}
+
+#box8 {
+	margin-top: -40px;
+	animation: animBox8 1.6s infinite;
+	animation-delay: 1400ms;
+}
+
+@keyframes animBox1 {
+	0% {transform: scale(0.1);}
+	25% {transform: scale(0.1);}
+	50% {transform: scale(1);}
+	75% {transform: scale(0.1);}
+	100% {transform: scale(0.1);}
+}
+
+@keyframes animBox2 {
+	0% {transform: scale(0.1);}
+	25% {transform: scale(0.1);}
+	50% {transform: scale(1);}
+	75% {transform: scale(0.1);}
+	100% {transform: scale(0.1);}
+}
+
+@keyframes animBox3 {
+	0% {transform: scale(0.1);}
+	25% {transform: scale(0.1);}
+	50% {transform: scale(1);}
+	75% {transform: scale(0.1);}
+	100% {transform: scale(0.1);}
+}
+
+@keyframes animBox4 {
+	0% {transform: scale(0.1);}
+	25% {transform: scale(0.1);}
+	50% {transform: scale(1);}
+	75% {transform: scale(0.1);}
+	100% {transform: scale(0.1);}
+}
+
+@keyframes animBox5 {
+	0% {transform: scale(0.1);}
+	25% {transform: scale(0.1);}
+	50% {transform: scale(1);}
+	75% {transform: scale(0.1);}
+	100% {transform: scale(0.1);}
+}
+
+@keyframes animBox6 {
+	0% {transform: scale(0.1);}
+	25% {transform: scale(0.1);}
+	50% {transform: scale(1);}
+	75% {transform: scale(0.1);}
+	100% {transform: scale(0.1);}
+}
+
+@keyframes animBox7 {
+	0% {transform: scale(0.1);}
+	25% {transform: scale(0.1);}
+	50% {transform: scale(1);}
+	75% {transform: scale(0.1);}
+	100% {transform: scale(0.1);}
+}
+
+@keyframes animBox8 {
+	0% {transform: scale(0.1);}
+	25% {transform: scale(0.1);}
+	50% {transform: scale(1);}
+	75% {transform: scale(0.1);}
+	100% {transform: scale(0.1);}
+}
