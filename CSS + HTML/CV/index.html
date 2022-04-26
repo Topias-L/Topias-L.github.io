@@ -3,10 +3,179 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>CV - HTML + CSS</title>
-		<link rel="Stylesheet" href="css/styles.css" type="text/css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+		<style>
+			body {
+				background-color: gray;
+			}
+
+			#b6{
+				position: absolute;
+				color: white;
+				font-size: 10px;
+				opacity: 0.1;
+				transform: rotate(90deg);
+				top: 565px;
+				left: 255px;
+				z-index: 99;
+			}
+
+			#mainBG {
+				position: absolute;
+				height: 1120px;
+				width: 800px;
+				
+				border: 6px solid black;
+				border-radius: 10px;
+				
+				background-image: url(images/bg.png);
+				background-size: cover;
+			}
+
+			#viiva1, #viiva2, #viiva3 {
+				position: relative;
+				background-color: black;
+				height: 1px;
+			}
+
+			#viiva1 {
+				width: 380px;
+				top: 189px;
+				left: 400px;
+			}
+
+			#viiva2 {
+				width: 375px;
+				top: 624px;
+				left: 405px;
+			}
+
+			#viiva3 {
+				width: 380px;
+				top: 727px;
+				left: 400px;
+			}
+
+			#titleText {
+				position: relative;
+				top: 25px;
+				left: 125px;
+				
+				font-family: 'Montserrat', sans-serif;
+				font-size: 40px;
+				text-align: center;
+			}
+
+			#tyokokemusText {
+				position: relative;
+				top: 75px;
+				left: 270px;
+				
+				font-family: 'Montserrat', sans-serif;
+				font-size: 18px;
+			}
+
+			#tunnustuksetText {
+				position: relative;
+				top: 115px;
+				left: 270px;
+				
+				font-family: 'Montserrat', sans-serif;
+				font-size: 18px;
+			}
+
+			#harrastuksetText {
+				position: relative;
+				top: 155px;
+				left: 270px;
+				
+				font-family: 'Montserrat', sans-serif;
+				font-size: 18px;
+			}
+
+			#sideBG {
+				position: absolute;
+				height: 1120px;
+				width: 250px;
+				top: 10px;
+				left: 10px;
+				
+				border: 4px solid black;
+				
+				background-image: url(images/bg_side.png);
+				background-position: center;
+				background-size: cover;
+			}
+
+			#viiva4, #viiva5 {
+				position: relative;
+				background-color: white;
+				height: 1px;
+			}
+
+			#viiva4 {
+				width: 120px;
+				top: 93px;
+				left: 120px;
+			}
+
+			#viiva5 {
+				width: 123px;
+				top: 234px;
+				left: 117px;
+			}
+
+			#img {
+				position: relative;
+				height: 200px;
+				width: 200px;
+				
+				top: 21px;
+				left: 20px;
+				
+				border: 4px solid black;
+				border-radius: 25%;
+				box-shadow: 5px 5px 20px black;
+				
+				background-color: white;
+			}
+
+			#yhteystiedotText {
+				position: relative;
+				top: 80px;
+				left: 11px;
+				
+				font-family: 'Montserrat', sans-serif;
+				font-size: 16px;
+				color: white;
+			}
+
+			a{
+				color: rgba(200,150,150,1);
+				text-decoration: none;
+				transition: all 0.15s ease-in-out;
+			}
+
+			a:hover {
+				color: red !important;
+			}
+
+			a:visited{
+				color: rgba(180,130,130,1);
+			}
+
+			#koulutuksetText {
+				position: relative;
+				top: 440px;
+				left: 17px;
+				
+				font-family: 'Montserrat', sans-serif;
+				font-size: 16px;
+				color: white;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="b6">💣︎👎︎☜︎⬥︎💣︎❄︎✌︎⬥︎💣︎❄︎☜︎♑︎💣︎👎︎☜︎⌧︎💣︎👎︎✌︎⌧︎💣︎👎︎☜︎♑︎💣︎👎︎☜︎⌧︎💣︎👎︎✌︎⬥︎💣︎❄︎☜︎♑︎💣︎👎︎☜︎⌧︎💣︎❄︎✌︎⬥︎💣︎❄︎✌︎♑︎💣︎👎︎☜︎⌧︎💣︎👎︎✌︎⌧︎💣︎👎︎☜︎♑︎💣︎👎︎☜︎⌧︎💣︎❄︎✌︎⌧︎💣︎👎︎✌︎♑︎💣︎👎︎☜︎⌧︎💣︎❄︎✌︎⬥︎💣︎❄︎☜︎♑︎💣︎👎︎✌︎⌧︎💣︎👎︎✌︎⬥︎💣︎👎︎✌︎♑︎💣︎👎︎✌︎⌧︎💣︎❄︎☜︎⬥︎💣︎❄︎✌︎♑︎💣︎👎︎✌︎⌧︎💣︎👎︎☜︎⬥︎💣︎👎︎☜︎🖬︎</div>
@@ -32,8 +201,8 @@
 			<div id="tunnustuksetText"><b>Tunnustukset</b><br><br>Ei ole vielä mitään.</div>
 			<div id="harrastuksetText"><b>Harrastukset</b><br>
 			<br><b>Pelaaminen</b><br>Pääsääntöisesti tietokoneella.<br>Ollut minun pääharrastus tosi kauan.<br>
-			<br><b>Lemmikin hoito</b><br>En ole vielä aloittanut harrastusta,-<br>mutta on suunitteilla,-<br>että omistaisin käärmeen lähitulevaisuudessa.<br>
-			<br><b>Autojen huoltaminen / työstäminen</b><br>En ole harrastanut, mutta olisi kiinostusta aloittaa.
+			<br><b>Lemmikin hoito</b><br>En ole vielä aloittanut harrastusta,-<br>mutta on suunnitteilla,-<br>että omistaisin käärmeen lähitulevaisuudessa.<br>
+			<br><b>Autojen huoltaminen / työstäminen</b><br>En ole harrastanut, mutta olisi kiinnostusta aloittaa.
 			<br>Autoihin ollut aina kiinnostusta,-<br>mutta ei ole ollut varaa / mahdollisuutta aloittaa.</div>
 		</div>
 		<div id="sideBG">
@@ -46,8 +215,7 @@
 				<br><a href="https://github.com/Topias-l" target="_new">https://github.com/Topias-l</a></div>
 			</div>
 			<div id="koulutuksetText"><b>Koulutukset</b><br>
-				<br><b>Luovi Oulu | TVT</b>
-				<br>Työnalla.
+				<br><b>Luovi Oulu<br>Tieto- ja viestintätekniikan<br>perustutkinto</b>
 				<br>Arvioitu valmistuminen: 2024
 				<br>
 				<br><b>Pulkkilan peruskoulu</b>

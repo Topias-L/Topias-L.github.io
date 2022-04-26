@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+		<style>
+			body {
+				background-color: rgba(20,20,20,1);
+			}
+		
+			#containter {
+				position: absolute;
+				top: 40px;
+				left: 8px;
+				height: 654px;
+				width: 1316px;
+				border: 6px solid rgba(45,45,45,1);
+				border-radius: 10px;
+				background-color: rgba(60,60,60,1);
+				display: inline-block;
+				padding: 10px;
+			}
+		
+			#slot1, #slot2, #slot3, #slot4, #slot5, #slot6, #slot7, #slot8, #slot9, #slot10, #slot11, #slot12, #slot13, #slot14, #slot15, #slot16, #slot17, #slot18 {
+				position: relative;
+				height: 200px;
+				width: 200px;
+				margin: 4px;
+				display: inline-block;
+				background-color: black;
+				border: 4px solid rgba(30,30,30,1);
+				border-radius: 20px;
+				box-shadow: 4px 4px rgba(20,20,20,0.2);
+			}
+		</style>
+		<script>
+			function randomize() {
+				console.clear();
+				console.log("Randomizing images!");
+			
+				var i = 1;
+				while(i<=18) {
+					var rand = Math.floor(Math.random() * 19)+1;
+					document.getElementById("slot" + i).style.backgroundImage = "url(images/img"+rand+".png)";
+					if (rand >= 11) {
+						document.getElementById("slot" + i).style.borderColor = "white";
+					} else {
+						document.getElementById("slot" + i).style.borderColor = "black";
+					}
+					console.log("slot"+i+" Image set to: img"+rand+".png");
+					i++;
+				}
+				
+				console.log("Randomizing complete!");
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" onClick="randomize()">Randomize!</button>
+		<div id="containter">
+			<div id="slot1"></div>
+			<div id="slot2"></div>
+			<div id="slot3"></div>
+			<div id="slot4"></div>
+			<div id="slot5"></div>
+			<div id="slot6"></div>
+			<div id="slot7"></div>
+			<div id="slot8"></div>
+			<div id="slot9"></div>
+			<div id="slot10"></div>
+			<div id="slot11"></div>
+			<div id="slot12"></div>
+			<div id="slot13"></div>
+			<div id="slot14"></div>
+			<div id="slot15"></div>
+			<div id="slot16"></div>
+			<div id="slot17"></div>
+			<div id="slot18"></div>
+		</div>
+	</body>
+</html>
