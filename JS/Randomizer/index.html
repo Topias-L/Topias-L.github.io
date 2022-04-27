@@ -7,12 +7,12 @@
 				background-color: rgba(20,20,20,1);
 			}
 		
-			#containter {
+			#container {
 				position: absolute;
 				top: 40px;
 				left: 8px;
-				height: 654px;
-				width: 1316px;
+				height: 0px;
+				width: 0px;
 				border: 6px solid rgba(45,45,45,1);
 				border-radius: 10px;
 				background-color: rgba(60,60,60,1);
@@ -20,10 +20,10 @@
 				padding: 10px;
 			}
 		
-			#slot1, #slot2, #slot3, #slot4, #slot5, #slot6, #slot7, #slot8, #slot9, #slot10, #slot11, #slot12, #slot13, #slot14, #slot15, #slot16, #slot17, #slot18 {
+			.slotStyle {
 				position: relative;
-				height: 200px;
-				width: 200px;
+				height: 100px;
+				width: 100px;
 				margin: 4px;
 				display: inline-block;
 				background-color: black;
@@ -33,12 +33,47 @@
 			}
 		</style>
 		<script>
+		
+			function generate(size) {
+				
+				sessionStorage.setItem('size', size);
+				
+				var buffer = "";
+				var counter = 1;
+				var i = 0;
+				
+				if (size == 9) {
+					document.getElementById("container").style.width = "350px";
+					document.getElementById("container").style.height = "354px";
+				} else if (size == 16) {
+					document.getElementById("container").style.width = "470px";
+					document.getElementById("container").style.height = "474px";
+				} else if (size == 25) {
+					document.getElementById("container").style.width = "580px";
+					document.getElementById("container").style.height = "594px";
+				} else if (size == 36) {
+					document.getElementById("container").style.width = "700px";
+					document.getElementById("container").style.height = "714px";
+				}
+				
+				while (i<size) {
+					buffer += "<div id='slot"+counter+"' class='slotStyle'></div>";
+					console.log(buffer);
+					counter++;
+					i++;
+				}
+				
+				document.getElementById('container').innerHTML = buffer;
+			}
+		
 			function randomize() {
 				console.clear();
 				console.log("Randomizing images!");
-			
+				
+				var sessionSize = sessionStorage.getItem('size')
+				
 				var i = 1;
-				while(i<=18) {
+				while(i<=sessionSize) {
 					var rand = Math.floor(Math.random() * 19)+1;
 					document.getElementById("slot" + i).style.backgroundImage = "url(images/img"+rand+".png)";
 					if (rand >= 11) {
@@ -56,26 +91,14 @@
 		</script>
 	</head>
 	<body>
-		<button type="button" onClick="randomize()">Randomize!</button>
-		<div id="containter">
-			<div id="slot1"></div>
-			<div id="slot2"></div>
-			<div id="slot3"></div>
-			<div id="slot4"></div>
-			<div id="slot5"></div>
-			<div id="slot6"></div>
-			<div id="slot7"></div>
-			<div id="slot8"></div>
-			<div id="slot9"></div>
-			<div id="slot10"></div>
-			<div id="slot11"></div>
-			<div id="slot12"></div>
-			<div id="slot13"></div>
-			<div id="slot14"></div>
-			<div id="slot15"></div>
-			<div id="slot16"></div>
-			<div id="slot17"></div>
-			<div id="slot18"></div>
-		</div>
+	
+		<button type="button" onClick="generate(9)">Generate 3x3</button>
+		<button type="button" onClick="generate(16)">Generate 4x4</button>
+		<button type="button" onClick="generate(25)">Generate 5x5</button>
+		<button type="button" onClick="generate(36)">Generate 6x6</button>
+		
+		
+		<button type="button" onClick="randomize()">Randomize the Images!</button>
+		<div id="container"></div>
 	</body>
 </html>
