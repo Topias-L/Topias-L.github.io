@@ -2,6 +2,9 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 		<style>
 			body {
 				background-color: rgba(20,20,20,1);
@@ -9,60 +12,167 @@
 		
 			#container {
 				position: absolute;
-				top: 40px;
+				top: 60px;
 				left: 8px;
 				height: 0px;
 				width: 0px;
-				border: 6px solid rgba(45,45,45,1);
+				border: 4px solid rgba(45,45,45,1);
 				border-radius: 10px;
-				background-color: rgba(60,60,60,1);
+				background-color: rgba(160,160,160,1);
 				display: inline-block;
-				padding: 10px;
+				padding: 4px;
 			}
 		
 			.slotStyle {
 				position: relative;
-				height: 100px;
-				width: 100px;
-				margin: 4px;
-				display: inline-block;
+				height: 50px;
+				width: 50px;
+				float: left;
+				margin: 2px;
 				background-color: black;
-				border: 4px solid rgba(30,30,30,1);
-				border-radius: 20px;
-				box-shadow: 4px 4px rgba(20,20,20,0.2);
+				border: 2px solid rgba(30,30,30,1);
+				border-radius: 4px;
+				box-shadow: 2px 2px rgba(20,20,20,0.2);
+			}
+			
+			.slider {
+				position: absolute;
+				top: 35px;
+				left: 6px;
+				width: 160px;
+			}
+			
+			.button {
+				position: absolute;
+				left: 8px;
+				width: 160px;
+			}
+			
+			#sizeTXT {
+				position: absolute;
+				top: 12px;
+				left: 200px;
+				height: 30px;
+				width: 200px;
+				
+				color: white;
+				font-family: 'Roboto', sans-serif;
+				font-size: 30px;
+				font-weight: bold;
+				
 			}
 		</style>
 		<script>
 		
-			function generate(size) {
+			function generate() {
 				
-				sessionStorage.setItem('size', size);
+				var sizePreProcess = document.getElementById("gridSlider").value;
+				console.log(sizePreProcess);
+				
+				switch (sizePreProcess) {
+				case '1':
+					var sizeProcessed = 1;
+					var sizeText = "1x1";
+					break;
+				case '2':
+					var sizeProcessed = 4;
+					var sizeText = "2x2";
+					break;
+				case '3':
+					var sizeProcessed = 9;
+					var sizeText = "3x3";
+					break;
+				case '4':
+					var sizeProcessed = 16;
+					var sizeText = "4x4";
+					break;
+				case '5':
+					var sizeProcessed = 25;
+					var sizeText = "5x5";
+					break;
+				case '6':
+					var sizeProcessed = 36;
+					var sizeText = "6x6";
+					break;
+				case '7':
+					var sizeProcessed = 49;
+					var sizeText = "7x7";
+					break;
+				case '8':
+					var sizeProcessed = 64;
+					var sizeText = "8x8";
+					break;
+				case '9':
+					var sizeProcessed = 81;
+					var sizeText = "9x9";
+					break;
+				case '10':
+					var sizeProcessed = 100;
+					var sizeText = "10x10";
+					break;
+				default:
+					var sizeProcessed = 12;
+					var sizeText = "4x3";
+					break;
+				}
+				
+				document.getElementById("sizeTXT").innerHTML = sizeText;
+				
+				console.log(sizeProcessed);
+				
+				sessionStorage.setItem('sizeProcessed', sizeProcessed);
 				
 				var buffer = "";
 				var counter = 1;
 				var i = 0;
 				
-				if (size == 9) {
-					document.getElementById("container").style.width = "350px";
-					document.getElementById("container").style.height = "354px";
-				} else if (size == 16) {
-					document.getElementById("container").style.width = "470px";
-					document.getElementById("container").style.height = "474px";
-				} else if (size == 25) {
-					document.getElementById("container").style.width = "580px";
-					document.getElementById("container").style.height = "594px";
-				} else if (size == 36) {
-					document.getElementById("container").style.width = "700px";
-					document.getElementById("container").style.height = "714px";
+				switch (sizeProcessed) {
+					case 1:
+						document.getElementById("container").style.width = "58px";
+						document.getElementById("container").style.height = "58px";
+						break;
+					case 4:
+						document.getElementById("container").style.width = "116px";
+						document.getElementById("container").style.height = "116px";
+						break;
+					case 9:
+						document.getElementById("container").style.width = "174px";
+						document.getElementById("container").style.height = "174px";
+						break;
+					case 16:
+						document.getElementById("container").style.width = "232px";
+						document.getElementById("container").style.height = "232px";
+						break;
+					case 25:
+						document.getElementById("container").style.width = "290px";
+						document.getElementById("container").style.height = "290px";
+						break;
+					case 36:
+						document.getElementById("container").style.width = "348px";
+						document.getElementById("container").style.height = "348px";
+						break;
+					case 49:
+						document.getElementById("container").style.width = "406px";
+						document.getElementById("container").style.height = "406px";
+						break;
+					case 64:
+						document.getElementById("container").style.width = "464px";
+						document.getElementById("container").style.height = "464px";
+						break;
+					case 81:
+						document.getElementById("container").style.width = "522px";
+						document.getElementById("container").style.height = "522px";
+						break;
+					case 100:
+						document.getElementById("container").style.width = "580px";
+						document.getElementById("container").style.height = "580px";
+						break;
 				}
-				
-				while (i<size) {
+				while (i<sizeProcessed) {
 					buffer += "<div id='slot"+counter+"' class='slotStyle'></div>";
-					console.log(buffer);
 					counter++;
 					i++;
 				}
-				
 				document.getElementById('container').innerHTML = buffer;
 			}
 		
@@ -70,7 +180,7 @@
 				console.clear();
 				console.log("Randomizing images!");
 				
-				var sessionSize = sessionStorage.getItem('size')
+				var sessionSize = sessionStorage.getItem('sizeProcessed')
 				
 				var i = 1;
 				while(i<=sessionSize) {
@@ -84,21 +194,15 @@
 					console.log("slot"+i+" Image set to: img"+rand+".png");
 					i++;
 				}
-				
 				console.log("Randomizing complete!");
-				
 			}
 		</script>
 	</head>
 	<body>
 	
-		<button type="button" onClick="generate(9)">Generate 3x3</button>
-		<button type="button" onClick="generate(16)">Generate 4x4</button>
-		<button type="button" onClick="generate(25)">Generate 5x5</button>
-		<button type="button" onClick="generate(36)">Generate 6x6</button>
-		
-		
-		<button type="button" onClick="randomize()">Randomize the Images!</button>
+		<input type="range" min="1" max="10" value="2" class="slider" id="gridSlider" onchange="generate()">
+		<button type="button" class="button" onClick="randomize()">Randomize the Images!</button>
+		<div id="sizeTXT"></div>
 		<div id="container"></div>
 	</body>
 </html>
