@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<body onload="generate()">
+		<script>
+		
+			function generate() {
+				var i = 1;
+				var buffer = "";
+				
+				while (i <= 25) {
+					buffer += '<button type="button" id="slot' + i + '" class="bingoSlot toggleOff" onClick="toggleTarget(this.id)"></button>';
+					i++;
+				}
+				document.getElementById('container').innerHTML += buffer;
+				console.log(buffer);
+			}
+			
+			function imageshuffle() {
+				
+				var imgArray = new Array("img1.png", "img2.png", "img3.png", "img4.png", "img5.png",
+					"img6.png", "img7.png", "img8.png", "img9.png", "img10.png",
+					"img11.png", "img12.png", "img13.png", "img14.png", "img15.png",
+					"img16.png", "img17.png", "img18.png", "img19.png", "img20.png", 
+					"img21.png", "img22.png", "img23.png", "img24.png", "img25.png", "img26.png");
+				
+				var i = 1;
+				var y = 1;
+				
+				imgArray.sort(() => (Math.random() > .5) ? 1 : -1);
+				
+				while (y <= 25) {
+					console.log(imgArray[y]);
+					document.getElementById("slot"+y).style.backgroundImage = "url(images/"+imgArray[y]+")";
+					y++;
+				}
+				console.log(imgArray);
+			}
+			
+			function toggleTarget(target) {
+				var elem = document.getElementById(target);
+				console.log(target);
+				
+				if(elem.getAttribute("class") == "bingoSlot toggleOff"){
+					elem.setAttribute("class", "bingoSlot toggleOn");
+				}
+				else{
+					elem.setAttribute("class", "bingoSlot toggleOff");
+				}
+				
+			}
+			
+		</script>
+		<style>
+			body {
+				background-color: rgba(20,20,20,1);
+			}
+		
+			#container {
+				border: 1px solid black;
+				border-radius: 10px;
+				height: 560px;
+				width: 540px;
+				padding: 10px;
+				background-color: rgba(140,140,140,1);
+				box-shadow: 10px 10px 20px 8px rgba(10,10,10,1);
+				
+			}
+			
+			#titleTXT {
+				font-family: 'Roboto', sans-serif;
+				font-weight: bold;
+			}
+			
+			.bingoSlot {
+				height: 100px;
+				width: 100px;
+				
+				float: left;
+				margin: 4px;
+				
+				border: 2px solid black;
+				border-radius: 4px;
+				background-color: rgba(40,40,40,1);
+				
+				cursor: pointer;
+				
+				transition: 0.2s;
+			}
+			
+			.bingoSlot:active {
+				box-shadow: inset 0px 0px 8px 4px rgba(60,60,60,1);
+			}
+			
+			#shuffle {
+				position: absolute;
+				top: 16px;
+				left: 150px;
+			}
+			
+			.toggleOn {
+				border-color: red;
+			}
+			
+			.toggleOn:hover {
+				border: 4px solid red;
+			}
+			
+			.toggleOff {
+				border-color: black;
+			}
+			
+			.toggleOff:hover {
+				border: 4px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="titleTXT">Vappu Bingo</div>
+			<button type="button" id="shuffle" onClick="imageshuffle()">Shuffle Images</button>
+		</div>
+	</body>
+</html>

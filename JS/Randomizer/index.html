@@ -12,7 +12,7 @@
 		
 			#container {
 				position: absolute;
-				top: 60px;
+				top: 170px;
 				left: 8px;
 				height: 0px;
 				width: 0px;
@@ -33,6 +33,40 @@
 				border: 2px solid rgba(30,30,30,1);
 				border-radius: 4px;
 				box-shadow: 2px 2px rgba(20,20,20,0.2);
+				transition: 0.4s;
+			}
+			
+			#counterContainer {
+				position: absolute;
+				top: 170px;
+				left: 620px;
+				
+				height: 296px;
+				width: 876px;
+				background-color: rgba(40,40,40,1);
+				border: 4px solid black;
+				border-radius: 10px;
+				padding: 4px;
+				
+				color: white;
+				font-family: 'Roboto', sans-serif;
+			}
+			
+			tr, td {
+				border: 1px solid rgba(30,30,30,1);
+				color: white;
+				font-family: 'Roboto', sans-serif;
+				background-color: rgba(70,70,70,1);
+			}
+			
+			#theme {
+				position: absolute;
+				width: 130px;
+				top: 60px;
+				
+				background-color: rgba(40,40,40,1);
+				color: white;
+				font-family: 'Roboto', sans-serif;
 			}
 			
 			.slider {
@@ -50,16 +84,23 @@
 			
 			#sizeTXT {
 				position: absolute;
-				top: 12px;
-				left: 200px;
-				height: 30px;
-				width: 200px;
+				top: 70px;
+				left: 220px;
+				height: 60px;
+				width: 250px;
 				
 				color: white;
 				font-family: 'Roboto', sans-serif;
-				font-size: 30px;
+				font-size: 50px;
 				font-weight: bold;
-				
+			}
+			
+			#warning {
+				position: absolute;
+				color: red;
+				font-size: 20px;
+				font-family: 'Roboto', sans-serif;
+				top: 850px;
 			}
 		</style>
 		<script>
@@ -115,6 +156,8 @@
 					var sizeText = "4x3";
 					break;
 				}
+				
+				sizeText += " Grid";
 				
 				document.getElementById("sizeTXT").innerHTML = sizeText;
 				
@@ -175,34 +218,146 @@
 				}
 				document.getElementById('container').innerHTML = buffer;
 			}
-		
-			function randomize() {
-				console.clear();
-				console.log("Randomizing images!");
-				
+			
+			var countArrayTotal = new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+			
+			function roll() {
+			
 				var sessionSize = sessionStorage.getItem('sizeProcessed')
 				
+				var theme = document.querySelector('input[name="themebtn"]:checked').value;
+				
+				if (theme == "light") {
+					var randCalc = "Math.floor(Math.random() * 10)+11";
+				} else if (theme == "dark") {
+					var randCalc = "Math.floor(Math.random() * 10)+1";
+				} else {
+					var randCalc = "Math.floor(Math.random() * 20)+1";
+				}
+				
 				var i = 1;
+				
 				while(i<=sessionSize) {
-					var rand = Math.floor(Math.random() * 19)+1;
+					var rand = eval(randCalc);
 					document.getElementById("slot" + i).style.backgroundImage = "url(images/img"+rand+".png)";
 					if (rand >= 11) {
 						document.getElementById("slot" + i).style.borderColor = "white";
 					} else {
 						document.getElementById("slot" + i).style.borderColor = "black";
 					}
-					console.log("slot"+i+" Image set to: img"+rand+".png");
+					
+					// Counting the amounts of colors seen
+					
+					countArrayTotal[rand] = countArrayTotal[rand] + 1;
+					document.getElementById('count'+rand).innerHTML = countArrayTotal[rand];
 					i++;
 				}
-				console.log("Randomizing complete!");
 			}
+			
+			function rollerRun() {
+				
+				var y = 0;
+				roller();
+			
+				function roller() {
+					setTimeout(function() {
+						roll();
+						y++;
+						if (y <= 1000) {
+							roller();
+						}
+					}, 5)
+				}
+			}
+			
 		</script>
 	</head>
 	<body>
 	
 		<input type="range" min="1" max="10" value="2" class="slider" id="gridSlider" onchange="generate()">
-		<button type="button" class="button" onClick="randomize()">Randomize the Images!</button>
+		<button type="button" class="rollBTN" onClick="roll()">Randomize the Images!</button>
+		<button type="button" class="rollerBTN" onClick="rollerRun()">Randomize the Images 1000 times!</button>
+		
+		<fieldset id="theme">
+			<legend>Picture Theme</legend>
+			
+			<div>
+				<input type="radio" id="light" name="themebtn" value="light" checked>
+				<label for="light">Light</label>
+			</div>
+			
+			<div>
+				<input type="radio" id="dark" name="themebtn" value="dark">
+				<label for="dark">Dark</label>
+			</div>
+			
+			<div>
+				<input type="radio" id="both" name="themebtn" value="both">
+				<label for="both">Both</label>
+			</div>
+		</fieldset>
+		
+		<div id="counterContainer">Color Counter
+			<div id="counterTotal">Total counted colors in this session.</div>
+			<table id="counterTable">
+				<tr>
+					<td style='background-image:url("images/img1.png")'>Black + White</td>
+					<td style='background-image:url("images/img2.png")'>Black + Red</td>
+					<td style='background-image:url("images/img3.png")'>Black + Orange</td>
+					<td style='background-image:url("images/img4.png")'>Black + Yellow</td>
+					<td style='background-image:url("images/img5.png")'>Black + Green</td>
+					<td style='background-image:url("images/img6.png")'>Black + Teal</td>
+					<td style='background-image:url("images/img7.png")'>Black + Cyan</td>
+					<td style='background-image:url("images/img8.png")'>Black + Blue</td>
+					<td style='background-image:url("images/img9.png")'>Black + Purple</td>
+					<td style='background-image:url("images/img10.png")'>Black + Pink</td>
+				</tr>
+				
+				<tr>
+					<td id="count1">0</td>
+					<td id="count2">0</td>
+					<td id="count3">0</td>
+					<td id="count4">0</td>
+					<td id="count5">0</td>
+					<td id="count6">0</td>
+					<td id="count7">0</td>
+					<td id="count8">0</td>
+					<td id="count9">0</td>
+					<td id="count10">0</td>
+				</tr>
+				
+				<tr>
+					<td style='background-image:url("images/img11.png");color:black;'>White + Black</td>
+					<td style='background-image:url("images/img12.png");color:black;'>White + Red</td>
+					<td style='background-image:url("images/img13.png");color:black;'>White + Orange</td>
+					<td style='background-image:url("images/img14.png");color:black;'>White + Yellow</td>
+					<td style='background-image:url("images/img15.png");color:black;'>White + Green</td>
+					<td style='background-image:url("images/img16.png");color:black;'>White + Teal</td>
+					<td style='background-image:url("images/img17.png");color:black;'>White + Cyan</td>
+					<td style='background-image:url("images/img18.png");color:black;'>White + Blue</td>
+					<td style='background-image:url("images/img19.png");color:black;'>White + Purple</td>
+					<td style='background-image:url("images/img20.png");color:black;'>White + Pink</td>
+				</tr>
+				
+				<tr>
+					<td id="count11">0</td>
+					<td id="count12">0</td>
+					<td id="count13">0</td>
+					<td id="count14">0</td>
+					<td id="count15">0</td>
+					<td id="count16">0</td>
+					<td id="count17">0</td>
+					<td id="count18">0</td>
+					<td id="count19">0</td>
+					<td id="count20">0</td>
+				</tr>
+			</table>
+		</div>
+		
 		<div id="sizeTXT"></div>
 		<div id="container"></div>
+		
+		<div id="warning"><b>WARNING!</b>
+		<br>Contains flashing lights!</div>
 	</body>
 </html>
