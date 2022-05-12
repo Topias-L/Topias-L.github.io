@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<style>
+			#board {
+				border: 2px solid black;
+			}
+		</style>
+		<script>
+			const board = document.getElementById("snakecanvas");
+			const board_ctx = snakecanvas.getContext("2d");
+			
+			let snake = [ 
+				{x: 200, y: 200},
+				{x: 190, y: 200}, 
+				{x: 180, y: 200}, 
+				{x: 170, y: 200}, 
+				{x: 160, y: 200},
+			];
+		</script>
+	</head>
+	<body>
+		<canvas id="snakecanvas" width="400" height="400"></canvas>
+	</body>
+</html>
