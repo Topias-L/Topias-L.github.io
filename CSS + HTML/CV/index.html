@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>CV - HTML + CSS</title>
+		<title>Curriculum Vitae</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -203,6 +203,183 @@
 				font-size: 16px;
 				color: white;
 			}
+			
+			#spinBG {
+				position: absolute;
+				top: 1200px;
+				left: 85px;
+				
+				height: 100px;
+				width: 100px;
+				background-color: rgba(170,170,170,1);
+				border: 2px solid black;
+				border-radius: 10px;
+				box-shadow: 5px 5px 10px black;
+			}
+			
+			#spinner1 {
+				position: absolute;
+				background-color: white;
+				animation: loader5anim1 6s infinite;
+				border: 1px solid black;
+				border-radius: 4px;
+			}
+
+			#spinner2 {
+				position: absolute;
+				background-color: red;
+				animation: loader5anim2 6s infinite;
+				border: 1px solid black;
+				border-radius: 4px;
+			}
+
+			@keyframes loader5anim1 {
+				0% {
+					height: 20px;
+					width: 20px;
+					
+					top: 20px;
+					left: 20px;
+				}
+					
+				12% {
+					height: 20px;
+					width: 60px;
+					
+					top: 20px;
+					left: 20px;
+				}
+					
+				25% {
+					height: 20px;
+					width: 20px;
+					
+					top: 20px;
+					left: 60px;
+				}
+					
+				42% {
+					height: 60px;
+					width: 20px;
+					
+					top: 20px;
+					left: 60px;
+				}
+				
+				55% {
+					height: 20px;
+					width: 20px;
+					
+					top: 60px;
+					left: 60px;
+				}
+				
+				67% {
+					height: 20px;
+					width: 60px;
+					
+					top: 60px;
+					left: 20px;
+				}
+					
+				80% {
+					height: 20px;
+					width: 20px;
+					
+					top: 60px;
+					left: 20px;
+				}
+					
+				92% {
+					height: 60px;
+					width: 20px;
+					
+					top: 20px;
+					left: 20px;
+				}
+				
+				100% {
+					height: 20px;
+					width: 20px;
+					
+					top: 20px;
+					left: 20px;
+				}
+			}
+
+			@keyframes loader5anim2 {
+				0% {
+					height: 20px;
+					width: 20px;
+					
+					top: 60px;
+					left: 60px;
+					}
+					
+				12% {
+					height: 20px;
+					width: 60px;
+					
+					top: 60px;
+					left: 20px;
+					}
+					
+				25% {
+					height: 20px;
+					width: 20px;
+					
+					top: 60px;
+					left: 20px;
+					}
+					
+				42% {
+					height: 60px;
+					width: 20px;
+					
+					top: 20px;
+					left: 20px;
+					}
+				
+				55% {
+					height: 20px;
+					width: 20px;
+					
+					top: 20px;
+					left: 20px;
+					}
+				
+				67% {
+					height: 20px;
+					width: 60px;
+					
+					top: 20px;
+					left: 20px;
+					}
+					
+				80% {
+					height: 20px;
+					width: 20px;
+					
+					top: 20px;
+					left: 60px;
+					}
+					
+				92% {
+					height: 60px;
+					width: 20px;
+					
+					top: 20px;
+					left: 60px;
+					}
+				
+				100% {
+					height: 20px;
+					width: 20px;
+					
+					top: 60px;
+					left: 60px;
+					}
+			}
 		</style>
 	</head>
 	<body>
@@ -219,16 +396,16 @@
 				<br>Työharjoittelu 2018 - Oulainen Tojapak Oy<br>
 				Työtehtävät: Pahvilaatikon leikkauskoneen operointi.<br>
 				Kesto: 1 kuukausi<br>
-				<br>Työharjoittelu 2015 - Pulkkilan MaxiMajakka<br>
+				<br>Työharjoittelu 2016 - Pulkkilan MaxiMajakka<br>
 				Työtehtävät: Hintalappujen asettelu, Hyllyjen täyttö.<br>
 				Kesto: 2 viikkoa<br>
-				<br>Työharjoittelu 2013 - Pulkkilan Sale<br>
+				<br>Työharjoittelu 2015 - Pulkkilan Sale<br>
 				Työtehtävät: Hyllyjen täyttö, tilausten purkaminen.<br>
 				Kesto: 1 viikko
 			</div>
 			<div id="tunnustuksetText"><b>Tunnustukset</b><br><br>Ei ole vielä mitään.</div>
 			<div id="harrastuksetText"><b>Harrastukset</b><br>
-			<br><b>Pelaaminen</b><br>Pääsääntöisesti tietokoneella.<br>Ollut minun pääharrastus tosi kauan.<br><br>Lempipelejä: Minecraft, Terraria, Oldschool Runescape,<br> Forza Horizon, ArmA 3, Factorio, Elden Ring<br>
+			<br><b>Pelaaminen</b><br>Pääsääntöisesti tietokoneella.<br>Ollut minun pääharrastus tosi kauan.<br><br>Lempipelejä: Minecraft, Terraria, Oldschool Runescape,<br> Forza Horizon, ArmA 3, Factorio, Elden Ring, Assetto Corsa<br>
 			<br><b>Lemmikin hoito</b><br>En ole vielä aloittanut harrastusta,-<br>mutta on suunnitteilla,-<br>että omistaisin käärmeen lähitulevaisuudessa.<br>
 			<br><b>Autojen huoltaminen / työstäminen</b><br>En ole harrastanut, mutta olisi kiinnostusta aloittaa.
 			<br>Autoihin ollut aina kiinnostusta,-<br>mutta ei ole ollut varaa / mahdollisuutta aloittaa.<br>
@@ -259,5 +436,10 @@
 			<br>Kaikki minun tekemäni<br> ohjelmointiprojektit näkee<br> Githubistani.<br>
 			<br>Olen myös aloittanut<br> vapaa-ajallani opettelemaan<br> pikkuisen Unity:llä<br> pelien tekoa.
 			</div>
+			<div id="spinBG">
+				<div id="spinner1"></div>
+				<div id="spinner2"></div>
+			</div>
+		</div>
 	</body>
 </html>
