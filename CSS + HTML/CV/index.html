@@ -8,7 +8,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 		<style>
 			body {
-				background-color: gray;
+				//background-color: gray;
 			}
 
 			#b6{
@@ -24,7 +24,7 @@
 
 			#mainBG {
 				position: absolute;
-				height: 1120px;
+				height: 1320px;
 				width: 800px;
 				
 				border: 6px solid black;
@@ -42,13 +42,13 @@
 
 			#viiva1 {
 				width: 380px;
-				top: 189px;
+				top: 186px;
 				left: 400px;
 			}
 
 			#viiva2 {
 				width: 375px;
-				top: 624px;
+				top: 622px;
 				left: 405px;
 			}
 
@@ -97,7 +97,7 @@
 
 			#sideBG {
 				position: absolute;
-				height: 1120px;
+				height: 1320px;
 				width: 250px;
 				top: 10px;
 				left: 10px;
@@ -109,21 +109,27 @@
 				background-size: cover;
 			}
 
-			#viiva4, #viiva5 {
+			#viiva4, #viiva5, #viiva6 {
 				position: relative;
 				background-color: white;
-				height: 1px;
+				height: 2px;
 			}
 
 			#viiva4 {
 				width: 120px;
-				top: 93px;
+				top: 95px;
 				left: 120px;
 			}
 
 			#viiva5 {
 				width: 123px;
 				top: 234px;
+				left: 117px;
+			}
+			
+			#viiva6 {
+				width: 123px;
+				top: 443px;
 				left: 117px;
 			}
 
@@ -140,6 +146,18 @@
 				box-shadow: 5px 5px 20px black;
 				
 				background-color: white;
+			}
+			
+			#imgtxt {
+				position: relative;
+				top: 100px;
+				left: 35px;
+				
+				font-size: 30px;
+				color: rgba(190,190,190,1);
+				
+				transform-origin: center;
+				transform: rotate(25deg);
 			}
 
 			#yhteystiedotText {
@@ -175,6 +193,16 @@
 				font-size: 16px;
 				color: white;
 			}
+			
+			#muitatietoja {
+				position: relative;
+				top: 480px;
+				left: 17px;
+				
+				font-family: 'Montserrat', sans-serif;
+				font-size: 16px;
+				color: white;
+			}
 		</style>
 	</head>
 	<body>
@@ -200,15 +228,21 @@
 			</div>
 			<div id="tunnustuksetText"><b>Tunnustukset</b><br><br>Ei ole vielä mitään.</div>
 			<div id="harrastuksetText"><b>Harrastukset</b><br>
-			<br><b>Pelaaminen</b><br>Pääsääntöisesti tietokoneella.<br>Ollut minun pääharrastus tosi kauan.<br>
+			<br><b>Pelaaminen</b><br>Pääsääntöisesti tietokoneella.<br>Ollut minun pääharrastus tosi kauan.<br><br>Lempipelejä: Minecraft, Terraria, Oldschool Runescape,<br> Forza Horizon, ArmA 3, Factorio, Elden Ring<br>
 			<br><b>Lemmikin hoito</b><br>En ole vielä aloittanut harrastusta,-<br>mutta on suunnitteilla,-<br>että omistaisin käärmeen lähitulevaisuudessa.<br>
 			<br><b>Autojen huoltaminen / työstäminen</b><br>En ole harrastanut, mutta olisi kiinnostusta aloittaa.
-			<br>Autoihin ollut aina kiinnostusta,-<br>mutta ei ole ollut varaa / mahdollisuutta aloittaa.</div>
+			<br>Autoihin ollut aina kiinnostusta,-<br>mutta ei ole ollut varaa / mahdollisuutta aloittaa.<br>
+			<br><b>Tietokoneen rakentaminen / huoltaminen</b><br>
+			<br>Mielestäni kivaa hommaa tehdä.<br> Rakentanut omia, sekä tuttujen tietokoneita.<br> ja tarvittaessa huoltanut niitä.<br> Esim. Näytönohjaimen vaihto, lämpötahnojen uusiminen,-<br> ja kokonaan tietokoneen uudelleenrakentaminen.
+			</div>
 		</div>
 		<div id="sideBG">
-			<div id="img"></div>
+			<div id="img">
+				<div id="imgtxt">kuva tähän</div>
+			</div>
 			<div id="viiva4"></div>
 			<div id="viiva5"></div>
+			<div id="viiva6"></div>
 			<div id="yhteystiedotText"><b>Yhteystiedot</b><br>
 				<br>Puh: 0401786395
 				<br>topias.laitinen1@gmail.com
@@ -220,6 +254,10 @@
 				<br>
 				<br><b>Pulkkilan peruskoulu</b>
 				<br>Valmistunut: 2017
+			</div>
+			<div id="muitatietoja"><b>Muita Tietoja</b><br>
+			<br>Kaikki minun tekemäni<br> ohjelmointiprojektit näkee<br> Githubistani.<br>
+			<br>Olen myös aloittanut<br> vapaa-ajallani opettelemaan<br> pikkuisen Unity:llä<br> pelien tekoa.
 			</div>
 	</body>
 </html>
