@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<link rel="Stylesheet" href="css\styles.css">
-	<meta charset="UTF-8"/>
+		<link rel="Stylesheet" href="css\styles.css">
+		<meta charset="UTF-8"/>
+		<script>
+			function setInfo() {
+				
+				const date = new Date();
+				date.toLocaleString("fi-FI");
+				const [dmy] = [date.getDate() + "." + date.getMonth() + "." +  date.getFullYear()];
+				
+				document.getElementById("pvm").innerHTML = [dmy];
+			}
+		</script>
 	</head>
 	<body>
+		<body onload="setInfo()">
 		<div id="kello">
 			<div id="tuntiviisari"></div>
 			<div id="minuuttiviisari"></div>
@@ -17,16 +28,19 @@
 			<div id="merkki6"></div>
 			<div id="keskiosa"></div>
 			<div id="keskiosa2"></div>
-			<div id="viikkonro">36</div>
-			<div id="viikko">Viikko</div>
-			<div id="päivänro">6</div>
-			<div id="päivä">Päivä</div>
-			<div id="kompassi"></div>
-			<div id="kompassineula"></div>
-			<div id="north">N</div>
-			<div id="east">E</div>
-			<div id="south">S</div>
-			<div id="west">W</div>
+			
+			<div id="pvmContainer">
+				<div id="pvm"></div>
+			</div>
+			
+			<div id="kompassi">
+				<div id="kompassineula"></div>
+				<div id="north">N</div>
+				<div id="east">E</div>
+				<div id="south">S</div>
+				<div id="west">W</div>
+			</div>
+			
 			<div id="helper"></div>
 		</div>
 	</body>

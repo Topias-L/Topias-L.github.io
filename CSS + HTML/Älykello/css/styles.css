@@ -18,10 +18,9 @@ body{
 	position: absolute;
 	width: 70px;
 	height: 70px;
-	background-color: rgba(20,20,20,0.3);
+	background-color: rgba(20,20,20,0.4);
 	font-family: arial;
 	font-size: 20px;
-	color: rgba(210,30,30,1);
 	z-index:10;
 	border: 2px solid rgba(200,200,200,0.8);
 	border-radius: 10px;
@@ -37,26 +36,15 @@ body{
 	height:40px;
 	background: rgb(2,0,36);
 	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(210,30,30,1) 0%, rgba(210,30,30,1) 49%, rgba(165,165,165,1) 51%, rgba(165,165,165,1) 100%);
-	top: 182px;
-	left: 287px;
+	top: 15px;
+	left: 35px;
 	z-index:90;
 	animation: kompassi 6s infinite;
 	animation-direction: normal;
 	transform-origin: center center;
 }
 
-#north {
-	position: absolute;
-	font-family: arial;
-	font-size: 10px;
-	color: rgba(210,30,30,1);
-	top: 170px;
-	left: 284px;
-	z-index: 101;
-}
-
-
-#east, #south, #west {
+#north, #east, #south, #west {
 	position: absolute;
 	font-family: arial;
 	font-size: 10px;
@@ -64,19 +52,25 @@ body{
 	z-index: 101;
 }
 
+#north {
+	color: rgba(210,30,30,1)!important;
+	top: -6px;
+	left: 32px;
+}
+
 #south {
-	top: 225px;
-	left: 284px;
+	top: 50px;
+	left: 32px;
 }
 
 #west {
-	top: 196px;
-	left: 255px;
+	top: 22px;
+	left: 2px;
 }
 
 #east {
-	top: 196px;
-	left: 313px;
+	top: 22px;
+	left: 62px;
 }
 
 #kello{
@@ -91,22 +85,24 @@ body{
 }
 
 #merkki1{
-	background-color: rgba(180,30,30,1);
+	background-color: rgba(210,30,30,1);
+	border: 1px solid rgba(160,10,10,1);
 	width: 6px;
 	height: 370px;
 	position: absolute;
-	top: 15px;
-	left: 197px;
+	top: 16px;
+	left: 196px;
 	z-index:2;
 	border-radius:3px;
 }
 
 #merkki2{
-	background-color: rgba(180,30,30,1);
+	background-color: rgba(210,30,30,1);
+	border: 1px solid rgba(160,10,10,1);
 	width: 6px;
 	height: 370px;
 	position: absolute;
-	top: 15px;
+	top: 16px;
 	left: 197px;
 	transform: rotate(90deg);
 	z-index:3;
@@ -115,10 +111,11 @@ body{
 
 #merkki3{
 	background-color: rgba(80,80,80,1);
-	width: 2px;
+	border: 1px solid rgba(60,60,60,1);
+	width: 1px;
 	height: 370px;
 	position: absolute;
-	top: 15px;
+	top: 16px;
 	left: 198px;
 	transform: rotate(30deg);
 	z-index:4;
@@ -126,10 +123,11 @@ body{
 
 #merkki4{
 	background-color: rgba(80,80,80,1);
-	width: 2px;
+	border: 1px solid rgba(60,60,60,1);
+	width: 1px;
 	height: 370px;
 	position: absolute;
-	top: 15px;
+	top: 16px;
 	left: 198px;
 	transform: rotate(60deg);
 	z-index:5;
@@ -137,10 +135,11 @@ body{
 
 #merkki5{
 	background-color: rgba(80,80,80,1);
-	width: 2px;
+	border: 1px solid rgba(60,60,60,1);
+	width: 1px;
 	height: 370px;
 	position: absolute;
-	top: 15px;
+	top: 16px;
 	left: 198px;
 	transform: rotate(120deg);
 	z-index:6;
@@ -148,10 +147,11 @@ body{
 
 #merkki6{
 	background-color: rgba(80,80,80,1);
-	width: 2px;
+	border: 1px solid rgba(60,60,60,1);
+	width: 1px;
 	height: 370px;
 	position: absolute;
-	top: 15px;
+	top: 16px;
 	left: 198px;
 	transform: rotate(150deg);
 	z-index:7;
@@ -162,7 +162,8 @@ body{
 	margin: 100px auto;
 	width:300px;
 	height:300px;
-	background-color:rgba(30,30,30,1);
+	background: rgb(30,30,30);
+	background: radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(30,30,30,1) 80%, rgba(30,30,30,0) 100%);
 	border-radius: 50%;
 	top: -50px;
 	z-index:8;
@@ -184,47 +185,47 @@ body{
 
 #tuntiviisari{
 	position: absolute;
-	width:8px;
+	width:6px;
+	border: 2px solid rgba(50,50,50,1);
 	height:100px;
 	background-color:rgba(70,70,70,1);
 	top: 100px;
-	left: 196px;
-	animation: rotation 43200s infinite;
-	animation-timing-function:linear;
+	left: 195px;
+	animation: rotation 43200s steps(60,end) infinite;
 	animation-direction:normal;
 	transform-origin: bottom center;
 	z-index:97;
-	border-radius:4px;
+	border-radius:6px;
 }
 
 #minuuttiviisari{
 	position: absolute;
-	width:6px;
+	width:4px;
 	height:150px;
 	background-color:rgba(165,165,165,1);
+	border: 2px solid rgba(145,145,145,1);
 	top: 50px;
-	left: 197px;
-	animation: rotation 3600s infinite;
-	animation-timing-function:linear;
+	left: 196px;
+	animation: rotation 3600s steps(60,end) infinite;
 	animation-direction:normal;
 	transform-origin: bottom center;
 	z-index:98;
-	border-radius:3px;
+	border-radius:4px;
 }
 
 #sekunttiviisari{
 	position: absolute;
 	width:2px;
 	height:180px;
-	background-color: rgba(210,30,30,1);	
+	background-color: rgba(210,30,30,1);
+	border: 1px solid rgba(180,0,0,1);
+	border-radius: 2px;
 	top: 20px;
-	left: 199px;
-	animation: rotation 60s infinite;
-	animation-timing-function:linear;
+	left: 198px;
+	animation: rotation 60s steps(60,end) infinite;
 	animation-direction:normal;
 	transform-origin: bottom center;
 	z-index:99;
-	border-radius:1px;
 }
 
 @keyframes rotation {
@@ -235,50 +236,29 @@ body{
 	50% {transform: rotate(180deg);}
 }
 
-#viikkonro, #päivänro {
+#pvmContainer{
 	position: absolute;
-	width: 35px;
-	height: 35px;
-	background-color: rgba(20,20,20,0.3);
+	top: 260px;
+	left: 150px;
+	width: 100px;
+	height: 30px;
+	background-color: rgba(20,20,20,0.5);
 	font-family: arial;
 	font-size: 20px;
 	color: rgba(210,30,30,1);
 	z-index:10;
 	border: 2px solid rgba(200,200,200,0.8);
 	border-radius: 10px;
-	margin: 100px auto;
 	text-align: center;
-	line-height: 26px;
+	line-height: 30px;
 }
 
-#viikko, #päivä {
-	position: absolute;
-	height: 10px;
-	width: 30px;
+#pvm{
+	position: relative;
+	height: auto;
+	width: auto;
 	font-family: arial;
-	font-size: 10px;
-	z-index: 10;
-	text-align: center;
-	line-height: 10px;
-	color: rgba(210,30,30,1);
-}
-
-#päivä {
-	top: 230px;
-	left: 109px;
-}
-
-#viikko {
-	top: 180px;
-	left: 109px;
-}
-
-#viikkonro {
-	top: 55px;
-	left: 105px;
-}
-
-#päivänro {
-	top: 105px;
-	left: 105px;
+	font-size: 20px;
+	color: rgba(160,160,160,1);
+	z-index: 101;
 }
